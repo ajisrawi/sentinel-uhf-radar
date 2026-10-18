@@ -1,0 +1,463 @@
+<title>SENTINEL-UHF Radar Design</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@500;600;700&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one 1080px reading column of numbered-by-subsystem sections, full-bleed render hero,
+   spec sheets as ruled tables; charts drawn from the simulation data. */
+:root {
+  --bg: #f3f4f1; --surface: #ffffff; --ink: #18201d; --muted: #5a645f; --faint: #8a938e;
+  --rule: #d8dcd6; --grid: #e7eae5; --accent: #1d5a86; --accent-soft: #e2ecf3; --signal: #a8561a;
+  --ok: #2c7a4b; --warn: #a8561a;
+  --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a;
+  --f-display: "Saira Semi Condensed", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --f-body: "Public Sans", "Segoe UI", system-ui, sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0f1517; --surface: #161e21; --ink: #e5ebe9; --muted: #9ba7a2; --faint: #6f7b77;
+  --rule: #2a3438; --grid: #222c30; --accent: #82b8e3; --accent-soft: #1a2833; --signal: #e39a52;
+  --ok: #5cbf86; --warn: #e39a52; --s1: #3987e5; --s2: #d95926; --s3: #199e70; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #0f1517; --surface: #161e21; --ink: #e5ebe9; --muted: #9ba7a2; --faint: #6f7b77;
+  --rule: #2a3438; --grid: #222c30; --accent: #82b8e3; --accent-soft: #1a2833; --signal: #e39a52;
+  --ok: #5cbf86; --warn: #e39a52; --s1: #3987e5; --s2: #d95926; --s3: #199e70; color-scheme: dark; }
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 400 15.5px/1.6 var(--f-body); margin: 0; }
+.wrap { max-width: 1080px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px));
+        padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 28px 64px; }
+header.top { display: grid; gap: 10px; padding-block: 8px 22px; border-bottom: 1px solid var(--rule); }
+.eyebrow { font: 600 12px/1 var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+h1 { font: 700 clamp(40px, 7vw, 72px)/0.95 var(--f-display); letter-spacing: .01em; margin: 0; text-wrap: balance; }
+h1 span { color: var(--accent); }
+.lede { max-width: 68ch; color: var(--muted); font-size: 17px; margin: 0; }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.tag { font: 500 12px/1 var(--f-mono); padding: 6px 9px; border: 1px solid var(--rule); border-radius: 3px; color: var(--muted); background: var(--surface); }
+.tag.warn { color: var(--warn); border-color: color-mix(in srgb, var(--warn) 45%, var(--rule)); }
+
+figure { margin: 0; }
+.hero { margin-block: 26px 8px; }
+.hero img { width: 100%; display: block; border-radius: 4px; background: #05070d; aspect-ratio: 16 / 9; object-fit: cover; }
+figcaption { font-size: 13px; color: var(--muted); margin-top: 8px; max-width: 80ch; }
+
+section { padding-block: 34px 6px; border-bottom: 1px solid var(--rule); }
+section:last-of-type { border-bottom: 0; }
+.sec-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 14px; }
+.sec-no { font: 500 13px/1 var(--f-mono); color: var(--accent); }
+h2 { font: 600 30px/1.1 var(--f-display); margin: 0; letter-spacing: .01em; text-wrap: balance; }
+h3 { font: 600 19px/1.2 var(--f-display); margin: 26px 0 8px; letter-spacing: .02em; }
+p { margin: 0 0 12px; max-width: 72ch; }
+.muted { color: var(--muted); }
+.mono, .num { font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
+
+.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px 34px; align-items: start; }
+.grid2 > * { min-width: 0; }
+.tbl-wrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+th, td { text-align: left; padding: 7px 10px 7px 0; border-bottom: 1px solid var(--grid); vertical-align: top; }
+th { font: 600 11px/1.3 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--rule); }
+td.v { font-family: var(--f-mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+td.r, th.r { text-align: right; padding-right: 0; }
+table.spec td:first-child { color: var(--muted); width: 46%; }
+tr.total td { font-weight: 600; border-top: 1px solid var(--rule); border-bottom: 0; }
+
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0; border: 1px solid var(--rule); border-radius: 4px; background: var(--surface); margin-block: 6px 18px; }
+.kpi { padding: 14px 16px; border-right: 1px solid var(--grid); }
+.kpi:last-child { border-right: 0; }
+.kpi b { display: block; font: 600 26px/1.1 var(--f-display); font-variant-numeric: tabular-nums; }
+.kpi span { font-size: 12.5px; color: var(--muted); }
+
+/* signal-chain diagram */
+.chain { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-block: 8px 6px; }
+.blk { background: var(--surface); border: 1px solid var(--rule); border-radius: 4px; padding: 11px 12px; position: relative; min-width: 0; }
+.blk .t { font: 600 15px/1.2 var(--f-display); letter-spacing: .02em; }
+.blk .n { font: 500 11px/1.3 var(--f-mono); color: var(--accent); margin-bottom: 4px; }
+.blk .d { font-size: 12.5px; color: var(--muted); margin-top: 4px; }
+.rails { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; margin-top: 10px; }
+.rail { border: 1px dashed var(--rule); border-radius: 4px; padding: 9px 12px; font-size: 13px; color: var(--muted); }
+.rail b { color: var(--ink); font-weight: 600; }
+
+/* charts */
+.chart { background: var(--surface); border: 1px solid var(--rule); border-radius: 4px; padding: 14px 14px 8px; position: relative; }
+.chart h4 { font: 600 14px/1.3 var(--f-body); margin: 0 0 2px; }
+.chart .sub { font-size: 12.5px; color: var(--muted); margin-bottom: 8px; }
+.chart svg { width: 100%; height: auto; display: block; overflow: visible; }
+.chart text { font: 11px var(--f-mono); fill: var(--muted); }
+.chart .lbl { fill: var(--ink); font-weight: 500; }
+.legend { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 12.5px; color: var(--muted); margin: 4px 0 6px; }
+.legend i { display: inline-block; width: 16px; height: 3px; border-radius: 2px; vertical-align: middle; margin-right: 6px; }
+.legend i.dash { background-image: linear-gradient(90deg, currentColor 55%, transparent 0); background-size: 6px 3px; }
+.tip { position: absolute; pointer-events: none; background: var(--ink); color: var(--bg); font: 12px/1.45 var(--f-mono);
+       padding: 7px 9px; border-radius: 3px; white-space: nowrap; transform: translate(-50%, -110%); z-index: 2; }
+.tabs { display: inline-flex; border: 1px solid var(--rule); border-radius: 4px; overflow: hidden; margin-bottom: 8px; }
+.tabs button { font: 500 12px var(--f-mono); padding: 6px 12px; border: 0; background: transparent; color: var(--muted); cursor: pointer; }
+.tabs button[aria-pressed="true"] { background: var(--accent-soft); color: var(--accent); }
+.tabs button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.shot { background: var(--surface); border: 1px solid var(--rule); border-radius: 4px; padding: 8px; }
+.shot img { width: 100%; display: block; border-radius: 2px; }
+.scroll-x { overflow-x: auto; }
+.callout { border-left: 3px solid var(--signal); padding: 4px 0 4px 14px; margin: 14px 0; max-width: 72ch; }
+.callout p:last-child { margin-bottom: 0; }
+.status { display: inline-block; font: 600 11px/1 var(--f-mono); letter-spacing: .06em; padding: 4px 7px; border-radius: 3px; text-transform: uppercase; }
+.status.ok { color: var(--ok); background: color-mix(in srgb, var(--ok) 12%, transparent); }
+.status.open { color: var(--warn); background: color-mix(in srgb, var(--warn) 12%, transparent); }
+ul.files { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; }
+ul.files li { display: grid; grid-template-columns: minmax(0, 260px) 1fr; gap: 12px; font-size: 13.5px; }
+ul.files code { font: 12.5px var(--f-mono); color: var(--accent); word-break: break-all; }
+@media (max-width: 560px) { ul.files li { grid-template-columns: 1fr; gap: 0; } .kpi { border-right: 0; border-bottom: 1px solid var(--grid); } }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="wrap">
+<header class="top">
+  <div class="eyebrow">Ground-based early-warning radar &middot; reference design &middot; Rev A &middot; 18 Oct 2026</div>
+  <h1>SENTINEL<span>-UHF</span></h1>
+  <p class="lede">A two-face, 420&ndash;450&nbsp;MHz solid-state phased-array radar in the class of PAVE PAWS / UEWR. This page covers the system sizing, the antenna element with its electromagnetic simulation, the T/R module electronics as a complete KiCad project (schematic and PCB), the digital back end, the site, and a cost estimate.</p>
+  <div class="tags">
+    <span class="tag">2 faces &times; 120&deg;</span><span class="tag" data-k="tag_elems"></span><span class="tag">GaN T/R modules</span>
+    <span class="tag">element-level digital beamforming</span><span class="tag warn">First-pass engineering design &middot; not released for build</span>
+  </div>
+</header>
+
+<figure class="hero">
+  <img src="img/site_photo_ai.jpg" alt="Photorealistic night view of the SENTINEL-UHF site: a tall white concrete building whose tilted face is filled by an octagonal phased array, red obstruction lights on top, floodlights at left, a low lit equipment building at right.">
+  <figcaption>AI visualisation (Pixelcut, Nano Banana 2.1) generated from the Blender model below, using a photo of a fielded UHF early-warning radar only as the lighting and materials reference. Site details such as the dishes and fences are illustrative.</figcaption>
+</figure>
+<figure class="shot" style="margin-top:14px">
+  <img src="img/sentinel_night.jpg" alt="Blender render of the same building and array from the same viewpoint.">
+  <figcaption>The engineering model behind that picture (<span class="mono">render/build_radar.py</span>): a 48&nbsp;m triangular building with its front corner truncated, 32&nbsp;m high, faces tilted back 20&deg;. Each 33&nbsp;m face carries a 28&nbsp;m octagon of 4,305 crossed-dipole positions on the 0.41&nbsp;m lattice: 2,587 active elements in the 22&nbsp;m circle and terminated dummy elements around them (PAVE PAWS: 1,792 active of 2,677).</figcaption>
+</figure>
+
+<section id="system">
+  <div class="sec-head"><span class="sec-no">01</span><h2>System at a glance</h2></div>
+  <div class="kpis">
+    <div class="kpi"><b data-k="r10_bs"></b><span>10&nbsp;m&sup2; detection, broadside</span></div>
+    <div class="kpi"><b data-k="r10_60"></b><span>10&nbsp;m&sup2; detection, 60&deg; scan</span></div>
+    <div class="kpi"><b data-k="pk_face"></b><span>peak RF per face</span></div>
+    <div class="kpi"><b data-k="site_mw"></b><span>site prime power</span></div>
+  </div>
+  <div class="grid2">
+    <div class="tbl-wrap"><table class="spec">
+      <tr><th colspan="2">Radio frequency</th></tr>
+      <tr><td>Band</td><td class="v">420&ndash;450 MHz (UHF radiolocation)</td></tr>
+      <tr><td>Polarisation</td><td class="v" data-k="cp"></td></tr>
+      <tr><td>Peak / average RF per face</td><td class="v" data-k="pwr_face"></td></tr>
+      <tr><td>Max duty cycle</td><td class="v">20 %</td></tr>
+      <tr><td>Waveforms</td><td class="v">LFM, 0.25&ndash;16 ms, 0.1&ndash;10 MHz</td></tr>
+      <tr><td>Range resolution</td><td class="v">1.5 km search / 15 m track</td></tr>
+      <tr><th colspan="2">Antenna</th></tr>
+      <tr><td>Faces</td><td class="v">2 &times; 120&deg; = 240&deg; azimuth</td></tr>
+      <tr><td>Active aperture</td><td class="v">22 m circle per face, tilt 20&deg;</td></tr>
+      <tr><td>Elements per face</td><td class="v" data-k="elems"></td></tr>
+      <tr><td>Lattice</td><td class="v">equilateral, 0.41 m (0.595&lambda;)</td></tr>
+      <tr><td>Gain / beamwidth (broadside)</td><td class="v" data-k="gain_bw"></td></tr>
+      <tr><td>Scan</td><td class="v">&plusmn;60&deg; az, 3&ndash;85&deg; el</td></tr>
+    </table></div>
+    <div class="tbl-wrap"><table class="spec">
+      <tr><th colspan="2">Performance (SNR 15 dB, P<sub>d</sub> 0.9, P<sub>fa</sub> 10<sup>-6</sup>)</th></tr>
+      <tr><td>Power-aperture per face</td><td class="v" data-k="pa"></td></tr>
+      <tr><td>Search fence (120&deg; &times; 3&deg;)</td><td class="v" data-k="fence"></td></tr>
+      <tr><td>Peak sidelobe (25 dB Taylor rx)</td><td class="v" data-k="psl"></td></tr>
+      <tr><td>Scan loss model</td><td class="v">cos&theta; per pass + EM mismatch</td></tr>
+      <tr><th colspan="2">Digital back end</th></tr>
+      <tr><td>RFSoC tiles per face</td><td class="v" data-k="tiles"></td></tr>
+      <tr><td>Element data rate</td><td class="v" data-k="raw"></td></tr>
+      <tr><td>After beamforming (16 beams)</td><td class="v" data-k="beams"></td></tr>
+      <tr><th colspan="2">Facility</th></tr>
+      <tr><td>Building</td><td class="v">32 m high, chamfered triangle</td></tr>
+      <tr><td>Prime power</td><td class="v" data-k="site_mw2"></td></tr>
+      <tr><td>Cooling</td><td class="v">liquid cold plates, glycol loop</td></tr>
+    </table></div>
+  </div>
+
+  <h3>Detection range versus target size</h3>
+  <p>Single 16&nbsp;ms pulse, both faces identical. The 30&deg; and 60&deg; curves include the projected-aperture loss and the element mismatch loss taken from the array simulation in section&nbsp;03, so the edge-of-scan numbers are the honest ones.</p>
+  <div class="chart" id="ch-range"></div>
+</section>
+
+<section id="architecture">
+  <div class="sec-head"><span class="sec-no">02</span><h2>Architecture</h2></div>
+  <p>Every element has its own transmit/receive module and its own ADC/DAC channel. There is no analog beamforming network: beams are formed in FPGA fabric, so one face can hold a search fence and track several targets in the same dwell.</p>
+  <div class="chain">
+    <div class="blk"><div class="n">per element &times; 2,587</div><div class="t">Crossed dipole</div><div class="d">28 cm tubes, 18 cm over the face, 90&deg; hybrid for circular polarisation</div></div>
+    <div class="blk"><div class="n">per element &times; 2,587</div><div class="t">T/R module</div><div class="d">GaN 300 W pk, circulator, limiter, LNA NF 0.5 dB, VSWR and bias protection</div></div>
+    <div class="blk"><div class="n">per 8 elements &times; 324</div><div class="t">RFSoC tile</div><div class="d">direct RF sampling at UHF, DDC/DUC, per-element calibration, partial beam sums</div></div>
+    <div class="blk"><div class="n">per face</div><div class="t">Beamformer</div><div class="d">fibre tree, 16 simultaneous receive beams, adaptive sidelobe nulling</div></div>
+    <div class="blk"><div class="n">per face</div><div class="t">Signal processor</div><div class="d">pulse compression, Doppler filtering, CFAR, monopulse angle estimates</div></div>
+    <div class="blk"><div class="n">site</div><div class="t">Data processor</div><div class="d">resource scheduler, multi-target tracking, discrimination, space catalog, C2 interface</div></div>
+  </div>
+  <div class="rails">
+    <div class="rail"><b>Timing</b> &middot; GPS-disciplined rubidium reference, White Rabbit distribution to every tile (&lt;10 ps skew).</div>
+    <div class="rail"><b>Power</b> &middot; utility feed plus 2 &times; 2 MW diesel sets; 50 V drain buses per subarray with pulse reservoirs.</div>
+    <div class="rail"><b>Cooling</b> &middot; cold plates under every module, ~1.1 MW heat to dry coolers.</div>
+  </div>
+
+  <h3>Waveforms</h3>
+  <div class="tbl-wrap"><table>
+    <tr><th>Mode</th><th>Pulse</th><th>Bandwidth</th><th>Range resolution</th><th>Use</th></tr>
+    <tr><td>Long-range search</td><td class="v">16 ms LFM</td><td class="v">100 kHz</td><td class="v">1.5 km</td><td>horizon fence, 10.8 s revisit</td></tr>
+    <tr><td>Track</td><td class="v">2&ndash;8 ms LFM</td><td class="v">1 MHz</td><td class="v">150 m</td><td>track update, 1&ndash;10 Hz per target</td></tr>
+    <tr><td>Discrimination</td><td class="v">0.25&ndash;2 ms LFM</td><td class="v">10 MHz</td><td class="v">15 m</td><td>object separation, length estimate</td></tr>
+    <tr><td>Calibration</td><td class="v">CW / chirp</td><td class="v">30 MHz</td><td class="v">&mdash;</td><td>mutual-coupling cal through module CAL port</td></tr>
+  </table></div>
+</section>
+
+<section id="antenna">
+  <div class="sec-head"><span class="sec-no">03</span><h2>Antenna element and EM simulation</h2></div>
+  <div class="grid2">
+    <div>
+      <p>Each element is a pair of crossed tubular dipoles (12&nbsp;mm aluminium, <span class="mono" data-k="dip_len"></span> long) mounted <span class="mono" data-k="dip_h"></span> above the face ground plane. The two dipoles feed a 90&deg; hybrid in the element base, giving circular polarisation with one T/R channel per element.</p>
+      <p>The element was sized with a thin-wire method-of-moments solver written for this project (<span class="mono">antenna/mom.py</span>). It uses rooftop basis functions with Galerkin testing, image theory for the face ground plane, and delta-gap ports. Before use it was checked against the textbook half-wave dipole: <span class="mono">84&nbsp;+&nbsp;j45&nbsp;&Omega;</span> and <span class="mono">2.16&nbsp;dBi</span>, against <span class="mono">2.15&nbsp;dBi</span> theory.</p>
+      <p>The array study solves a 61-element hexagonal patch, with 122 ports and 1,830 unknowns, at 420, 435 and 450&nbsp;MHz. That gives the full mutual-coupling matrix. Active reflection at the centre element is computed for phased scans in the E, H and diagonal planes, and the matching-network target is chosen by minimax over band and scan.</p>
+    </div>
+    <div class="tbl-wrap"><table class="spec">
+      <tr><th colspan="2">Simulated element (centre of 61-element patch)</th></tr>
+      <tr><td>Dipole length / height</td><td class="v" data-k="dip_lh"></td></tr>
+      <tr><td>Match target (x / y dipole)</td><td class="v" data-k="zref"></td></tr>
+      <tr><td>Embedded realised gain, broadside</td><td class="v" data-k="eep"></td></tr>
+      <tr><td>Ideal cell gain 4&pi;A/&lambda;&sup2;</td><td class="v" data-k="eep_ideal"></td></tr>
+      <tr><td>Axial ratio, broadside / 60&deg; worst</td><td class="v" data-k="ar"></td></tr>
+      <tr><td>Nearest-neighbour coupling</td><td class="v" data-k="cpl"></td></tr>
+      <tr><td>Active |&Gamma|, worst over band, &plusmn;60&deg;</td><td class="v" data-k="worstg"></td></tr>
+      <tr><td>Isolated element |S<sub>11</sub>|, 420&ndash;450 MHz</td><td class="v">&lt; &minus;15 dB</td></tr>
+    </table></div>
+  </div>
+  <div class="grid2" style="margin-top:16px">
+    <div class="chart" id="ch-active"></div>
+    <div class="chart" id="ch-eep"></div>
+  </div>
+  <div class="callout">
+    <p><b>Where the element falls short.</b> The match holds to about &minus;9&nbsp;dB out to 45&deg; but drops to &minus;4&nbsp;dB at 60&deg;, which costs 2.2&nbsp;dB per pass at the scan edge (already folded into the detection curve). The 0.41&nbsp;m lattice, the same as PAVE PAWS, puts the grating-lobe onset at about 61&deg; at 450&nbsp;MHz, so the edge of scan sits close to that limit. A trade study on a 37-element patch showed a 0.37&nbsp;m lattice gains under 1&nbsp;dB, which doesn't justify 30&nbsp;% more modules. The better next step is a wide-angle matching sheet over the face, checked in a full-wave model that includes the balun and feed posts.</p>
+  </div>
+  <figure class="shot" style="margin-top:12px"><img src="img/element_impedance.png" alt="Isolated element input impedance and S11 versus frequency, 400 to 470 MHz."><figcaption>Isolated element over ground: impedance and reflection at three heights (solver output).</figcaption></figure>
+</section>
+
+<section id="trm">
+  <div class="sec-head"><span class="sec-no">04</span><h2>T/R module electronics (KiCad)</h2></div>
+  <p>The radar is built from one module type, repeated 5,174 times across the two faces, so this is the board that matters. It is a complete KiCad 10 project. The schematic and PCB are generated by script from the circuit description, then checked by KiCad itself.</p>
+  <div class="kpis">
+    <div class="kpi"><b data-k="hw_parts"></b><span>components</span></div>
+    <div class="kpi"><b data-k="hw_nets"></b><span>nets, KiCad netlist matches intent</span></div>
+    <div class="kpi"><b data-k="hw_erc"></b><span>ERC violations</span></div>
+    <div class="kpi"><b data-k="hw_drc"></b><span>DRC errors / unrouted</span></div>
+  </div>
+  <h3>Gain and power line-up</h3>
+  <div class="tbl-wrap"><table>
+    <tr><th>Stage</th><th>Part class</th><th class="r">Gain</th><th class="r">Output</th></tr>
+    <tr><td>RFSoC DAC</td><td>direct RF synthesis</td><td class="v r">&mdash;</td><td class="v r">0 dBm</td></tr>
+    <tr><td>Driver gain block</td><td>MMIC, SOT-89</td><td class="v r">+20 dB</td><td class="v r">+20 dBm</td></tr>
+    <tr><td>Pad + match</td><td>3 dB &pi; pad, L-C match</td><td class="v r">&minus;3.5 dB</td><td class="v r">+16.5 dBm</td></tr>
+    <tr><td>GaN driver</td><td>10 W, 50 V, 440166 flange</td><td class="v r">+23 dB</td><td class="v r">+39.5 dBm (9 W)</td></tr>
+    <tr><td>GaN final</td><td>300 W, 50 V, NI-780 flange</td><td class="v r">+16 dB</td><td class="v r">+55.5 dBm (355 W)</td></tr>
+    <tr><td>Output match, circulator, coupler</td><td>drop-in ferrite, 30 dB coupler</td><td class="v r">&minus;0.7 dB</td><td class="v r">+54.8 dBm (300 W)</td></tr>
+    <tr class="total"><td>Receive chain</td><td>limiter &rarr; LNA &rarr; SAW &rarr; gain block</td><td class="v r">+34 dB</td><td class="v r">NF 1.1 dB</td></tr>
+  </table></div>
+  <div class="grid2" style="margin-top:12px">
+    <div>
+      <h3>Protection and sequencing</h3>
+      <p>GaN parts are depletion-mode, so the drain must never see 50&nbsp;V while the gate is at 0&nbsp;V. The drain switch turns on only when three conditions hold in hardware (one 3-input AND): the tile asserts <span class="mono">TX_EN</span>, a comparator confirms the PA gate is below &minus;2.0&nbsp;V, and the module controller has not vetoed. Gate voltages come from two 12-bit DACs through inverting op-amps, with 100&nbsp;k&Omega; pull-downs to &minus;5&nbsp;V so a dead controller fails pinched off.</p>
+      <p>The STM32G031 controller watches drain current (5&nbsp;m&Omega; shunt + INA240), forward and reflected power (VSWR trip), flange temperature and both gate voltages, and reports to the tile over RS-485.</p>
+    </div>
+    <div class="tbl-wrap"><table class="spec">
+      <tr><th colspan="2">PCB</th></tr>
+      <tr><td>Size</td><td class="v">230 &times; 130 mm, 4 layers</td></tr>
+      <tr><td>L1 F.Cu</td><td class="v">RF microstrip, components</td></tr>
+      <tr><td>L1&ndash;L2 dielectric</td><td class="v">RO4350B 0.254 mm</td></tr>
+      <tr><td>50 &Omega; line</td><td class="v">0.56 mm; PA path 1.6 mm</td></tr>
+      <tr><td>L2 In1.Cu</td><td class="v">solid ground plane</td></tr>
+      <tr><td>L3 In2.Cu</td><td class="v">50 V switched drain pour + signals</td></tr>
+      <tr><td>L4 B.Cu</td><td class="v">signals + ground pour</td></tr>
+      <tr><td>Thermal</td><td class="v">PA and circulator in cutouts on cold plate</td></tr>
+      <tr><td>Tracks / vias</td><td class="v" data-k="pcb_tv"></td></tr>
+    </table></div>
+  </div>
+  <h3>Schematic</h3>
+  <figure class="shot scroll-x"><img src="img/schematic.jpg" alt="Full T/R module schematic on an A1 sheet: TX chain, RX chain, power monitor, drain supply, power regulators, gate bias, interlock and controller blocks."><figcaption>One A1 sheet in functional blocks. <span class="mono">hardware/tr_module/export/SENTINEL_TRM_schematic.pdf</span> is the vector version.</figcaption></figure>
+  <h3>Layout</h3>
+  <div class="grid2">
+    <figure class="shot"><img src="img/pcb_3d.jpg" alt="3D render of the T/R module PCB from KiCad."><figcaption>KiCad 3D view, top side.</figcaption></figure>
+    <figure class="shot"><img src="img/pcb_layers.png" alt="PCB copper layers: red top layer RF chain, gold inner layer, blue bottom layer routing."><figcaption>Copper: red F.Cu, gold In2.Cu, blue B.Cu. The TX chain runs left to right along the top edge, RX returns along the middle, detectors at right, control at bottom.</figcaption></figure>
+  </div>
+  <div id="pcb-note"></div>
+</section>
+
+<section id="boards">
+  <div class="sec-head"><span class="sec-no">05</span><h2>All custom electronics</h2></div>
+  <p>Seven custom boards make up the radar. Each is its own KiCad 10 project, generated from a circuit description and checked by KiCad: electrical rules, then a pin-for-pin comparison of KiCad&rsquo;s netlist against the intended circuit, then placement, routing and design-rule check. Off-the-shelf parts of the system (RFSoC module, beamformer FPGAs, servers, site power) are not redesigned here.</p>
+  <div class="tbl-wrap"><table id="boards-t">
+    <tr><th>Board</th><th>Per face</th><th>Role</th><th class="r">Parts</th><th class="r">Nets</th><th class="r">ERC</th><th class="r">DRC err.</th><th class="r">Unrouted</th><th>Size</th></tr>
+  </table></div>
+  <div class="grid2" id="boards-g" style="margin-top:16px"></div>
+  <div class="callout"><p><b>What the automated layouts are and are not.</b> Every schematic is ERC-clean and matches its intended netlist exactly. The PCB layouts are first-pass placements and auto-routes. Differential pairs (data converters, LVDS clocks, 25&nbsp;Gb/s optics) are routed as single nets, and part pin maps for modules not in the KiCad library (RFSoC SOM connector, PLL, SP8T) are this project&rsquo;s own. Each board needs a manual layout pass and datasheet pin mapping before fabrication.</p></div>
+</section>
+
+<section id="cost">
+  <div class="sec-head"><span class="sec-no">06</span><h2>What it would cost</h2></div>
+  <p>A rough-order-of-magnitude acquisition estimate for one two-face site, based on commercial GaN and RFSoC pricing at production quantity. The &gt;$1&nbsp;billion figure for fielded US early-warning radars includes decades of operation, security, upgrades and program overhead that a hardware estimate leaves out.</p>
+  <div class="tbl-wrap"><table id="cost-t">
+    <tr><th>Item</th><th>Basis</th><th class="r">Low ($M)</th><th class="r">High ($M)</th></tr>
+  </table></div>
+  <p class="muted" style="margin-top:10px">Operation and maintenance adds roughly $15&ndash;25&nbsp;M per year (staff, power at ~1.5&nbsp;MW, module spares).</p>
+</section>
+
+<section id="status">
+  <div class="sec-head"><span class="sec-no">07</span><h2>What is verified, what is open</h2></div>
+  <div class="tbl-wrap"><table id="status-t">
+    <tr><th>Item</th><th>State</th><th>Evidence / next step</th></tr>
+  </table></div>
+  <h3>Project files</h3>
+  <ul class="files">
+    <li><code>radar_sizing.py</code><span>System budget: aperture, power, detection, fence, data rates, EM mismatch.</span></li>
+    <li><code>antenna/mom.py, simulate.py, explore.py</code><span>Thin-wire MoM solver, 61-element array study, lattice trade study; plots in <span class="mono">antenna/results/</span>.</span></li>
+    <li><code>hardware/*/SENTINEL_*.kicad_pro</code><span>Seven KiCad projects (T/R module, feed, RFSoC tile, backplane, PSU, calibration, clock), each with schematic, PCB, gerbers and its own symbol/footprint library.</span></li>
+    <li><code>hardware/tools/</code><span>Shared generators: schematic writer, placement/fan-out/A* router engine, KiCad build, ERC/netlist/DRC scripts.</span></li>
+    <li><code>hardware/tr_module/gen_schematic.py</code><span>Circuit description; regenerates the schematic and the intended netlist.</span></li>
+    <li><code>hardware/tr_module/pcb_plan.py, pcb_build.py</code><span>Placement, fan-out and A* router; board writer.</span></li>
+    <li><code>render/build_radar.py</code><span>Blender scene of the site; renders night and aerial views.</span></li>
+  </ul>
+</section>
+</div>
+
+<script id="data" type="application/json">{{DATA}}</script>
+<script>
+(() => {
+  const D = JSON.parse(document.getElementById("data").textContent);
+  document.querySelectorAll("[data-k]").forEach(el => {
+    const v = D.text[el.dataset.k];
+    if (v !== undefined) el.textContent = v;
+  });
+
+  // cost and status tables
+  const ct = document.getElementById("cost-t");
+  let lo = 0, hi = 0;
+  D.cost.forEach(([item, basis, a, b]) => {
+    lo += a; hi += b;
+    ct.insertAdjacentHTML("beforeend", `<tr><td>${item}</td><td class="muted">${basis}</td><td class="v r">${a}</td><td class="v r">${b}</td></tr>`);
+  });
+  ct.insertAdjacentHTML("beforeend", `<tr class="total"><td>Total acquisition</td><td></td><td class="v r">${lo}</td><td class="v r">${hi}</td></tr>`);
+  const st = document.getElementById("status-t");
+  D.status.forEach(([item, ok, note]) => st.insertAdjacentHTML("beforeend",
+    `<tr><td>${item}</td><td><span class="status ${ok ? "ok" : "open"}">${ok ? "done" : "open"}</span></td><td class="muted">${note}</td></tr>`));
+  const bt = document.getElementById("boards-t"), bg = document.getElementById("boards-g");
+  (D.boards || []).forEach(b => {
+    const v = x => x === null || x === undefined ? "-" : x;
+    bt.insertAdjacentHTML("beforeend", `<tr><td>${b.name}</td><td class="v">${b.qty}</td><td class="muted">${b.role}</td><td class="v r">${b.parts}</td><td class="v r">${b.nets}</td><td class="v r">${b.erc}</td><td class="v r">${v(b.drc)}</td><td class="v r">${v(b.unc)}</td><td class="v">${b.size}</td></tr>`);
+    if (b.folder !== "tr_module") bg.insertAdjacentHTML("beforeend", `<figure class="shot"><img src="img/${b.folder}_3d.jpg" alt="KiCad 3D view of the ${b.name} PCB." loading="lazy"><figcaption>${b.name}: KiCad 3D view.</figcaption></figure>`);
+  });
+  if (D.pcb_note) document.getElementById("pcb-note").innerHTML = `<div class="callout"><p>${D.pcb_note}</p></div>`;
+
+  // ---------------------------------------------------------------- line chart
+  const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+  function lineChart(host, cfg) {
+    host.innerHTML = `<h4>${cfg.title}</h4><div class="sub">${cfg.sub}</div>` +
+      (cfg.tabs ? `<div class="tabs" role="group">${cfg.tabs.map((t, i) => `<button type="button" aria-pressed="${i === cfg.tab}">${t}</button>`).join("")}</div>` : "") +
+      `<div class="legend"></div><svg role="img" aria-label="${cfg.title}"></svg>`;
+    const svg = host.querySelector("svg"), leg = host.querySelector(".legend");
+    const Wd = 640, Ht = 300, m = { l: 52, r: 86, t: 10, b: 36 };
+    svg.setAttribute("viewBox", `0 0 ${Wd} ${Ht}`);
+    const draw = () => {
+      const series = cfg.series();
+      const [x0, x1] = cfg.x.domain, [y0, y1] = cfg.y.domain;
+      const fx = cfg.x.log ? v => m.l + (Math.log10(v) - Math.log10(x0)) / (Math.log10(x1) - Math.log10(x0)) * (Wd - m.l - m.r)
+                           : v => m.l + (v - x0) / (x1 - x0) * (Wd - m.l - m.r);
+      const fy = v => m.t + (1 - (Math.min(Math.max(v, y0), y1) - y0) / (y1 - y0)) * (Ht - m.t - m.b);
+      let s = "";
+      cfg.y.ticks.forEach(t => { s += `<line x1="${m.l}" x2="${Wd - m.r}" y1="${fy(t)}" y2="${fy(t)}" stroke="${css("--grid")}" stroke-width="1"/>` +
+        `<text x="${m.l - 8}" y="${fy(t) + 4}" text-anchor="end">${cfg.y.fmt ? cfg.y.fmt(t) : t}</text>`; });
+      cfg.x.ticks.forEach(t => { s += `<text x="${fx(t)}" y="${Ht - m.b + 18}" text-anchor="middle">${cfg.x.fmt ? cfg.x.fmt(t) : t}</text>`; });
+      s += `<line x1="${m.l}" x2="${Wd - m.r}" y1="${Ht - m.b}" y2="${Ht - m.b}" stroke="${css("--rule")}"/>`;
+      s += `<text x="${(m.l + Wd - m.r) / 2}" y="${Ht - 2}" text-anchor="middle">${cfg.x.label}</text>`;
+      s += `<text transform="translate(12 ${(m.t + Ht - m.b) / 2}) rotate(-90)" text-anchor="middle">${cfg.y.label}</text>`;
+      (cfg.refs || []).forEach(r => { s += `<line x1="${m.l}" x2="${Wd - m.r}" y1="${fy(r.y)}" y2="${fy(r.y)}" stroke="${css("--faint")}" stroke-dasharray="4 4"/>` +
+        `<text x="${Wd - m.r + 6}" y="${fy(r.y) + 4}">${r.label}</text>`; });
+      series.forEach(se => {
+        const d = se.pts.map((p, i) => `${i ? "L" : "M"}${fx(p[0]).toFixed(1)},${fy(p[1]).toFixed(1)}`).join("");
+        s += `<path d="${d}" fill="none" stroke="${css(se.color)}" stroke-width="2" stroke-linejoin="round" ${se.dash ? 'stroke-dasharray="6 4"' : ""}/>`;
+        const last = se.pts[se.pts.length - 1];
+        if (se.label) s += `<text class="lbl" x="${fx(last[0]) + 6}" y="${fy(last[1]) + 4}">${se.label}</text>`;
+      });
+      s += `<line class="xh" y1="${m.t}" y2="${Ht - m.b}" stroke="${css("--muted")}" stroke-width="1" visibility="hidden"/>`;
+      series.forEach((se, i) => { s += `<circle class="dot" data-i="${i}" r="4" fill="${css(se.color)}" stroke="${css("--surface")}" stroke-width="2" visibility="hidden"/>`; });
+      s += `<rect x="${m.l}" y="${m.t}" width="${Wd - m.l - m.r}" height="${Ht - m.t - m.b}" fill="transparent" class="hit"/>`;
+      svg.innerHTML = s;
+      leg.innerHTML = series.map(se => `<span><i style="background:${se.dash ? "none" : css(se.color)};color:${css(se.color)}" class="${se.dash ? "dash" : ""}"></i>${se.name}</span>`).join("");
+      // hover
+      let tip = host.querySelector(".tip");
+      if (!tip) { tip = document.createElement("div"); tip.className = "tip"; tip.hidden = true; host.appendChild(tip); }
+      const hit = svg.querySelector(".hit"), xh = svg.querySelector(".xh");
+      const inv = px => cfg.x.log ? Math.pow(10, Math.log10(x0) + (px - m.l) / (Wd - m.l - m.r) * (Math.log10(x1) - Math.log10(x0)))
+                                  : x0 + (px - m.l) / (Wd - m.l - m.r) * (x1 - x0);
+      hit.onpointermove = e => {
+        const r = svg.getBoundingClientRect(), px = (e.clientX - r.left) / r.width * Wd;
+        const xv = inv(px);
+        const p0 = series[0].pts.reduce((a, b) => Math.abs(b[0] - xv) < Math.abs(a[0] - xv) ? b : a);
+        const X = fx(p0[0]);
+        xh.setAttribute("x1", X); xh.setAttribute("x2", X); xh.setAttribute("visibility", "visible");
+        let rows = `<b>${cfg.x.tip(p0[0])}</b>`;
+        series.forEach((se, i) => {
+          const p = se.pts.reduce((a, b) => Math.abs(b[0] - p0[0]) < Math.abs(a[0] - p0[0]) ? b : a);
+          const dot = svg.querySelector(`.dot[data-i="${i}"]`);
+          dot.setAttribute("cx", fx(p[0])); dot.setAttribute("cy", fy(p[1])); dot.setAttribute("visibility", "visible");
+          rows += `<br>${se.name}: ${cfg.y.tip(p[1])}`;
+        });
+        tip.innerHTML = rows; tip.hidden = false;
+        const hr = host.getBoundingClientRect();
+        tip.style.left = Math.min(Math.max(e.clientX - hr.left, 90), hr.width - 90) + "px";
+        tip.style.top = (fy(Math.max(...series.map(se => se.pts.reduce((a, b) => Math.abs(b[0] - p0[0]) < Math.abs(a[0] - p0[0]) ? b : a)[1]))) / Ht * r.height + (r.top - hr.top)) + "px";
+      };
+      hit.onpointerleave = () => { tip.hidden = true; xh.setAttribute("visibility", "hidden"); svg.querySelectorAll(".dot").forEach(d => d.setAttribute("visibility", "hidden")); };
+    };
+    if (cfg.tabs) host.querySelectorAll(".tabs button").forEach((b, i) => b.addEventListener("click", () => {
+      cfg.tab = i; host.querySelectorAll(".tabs button").forEach((bb, j) => bb.setAttribute("aria-pressed", String(j === i))); draw();
+    }));
+    draw();
+    return draw;
+  }
+
+  // range vs RCS
+  const rcs = Array.from({ length: 41 }, (_, i) => Math.pow(10, -2 + i * 0.075));
+  const R = D.range;
+  const redraws = [];
+  redraws.push(lineChart(document.getElementById("ch-range"), {
+    title: "Single-pulse detection range", sub: "16 ms LFM pulse, one face, swerling-1 target",
+    x: { domain: [0.01, 10], log: true, ticks: [0.01, 0.1, 1, 10], fmt: t => t + " m²", label: "radar cross section", tip: v => `RCS ${v < 0.1 ? v.toFixed(3) : v.toFixed(2)} m²` },
+    y: { domain: [0, 7000], ticks: [0, 1000, 2000, 3000, 4000, 5000, 6000, 7000], fmt: t => t ? (t / 1000) + "k" : "0", label: "range (km)", tip: v => `${Math.round(v).toLocaleString()} km` },
+    series: () => [
+      { name: "broadside", color: "--s1", label: "0°", pts: rcs.map(s => [s, R.bs * Math.pow(s / 10, 0.25)]) },
+      { name: "30° scan", color: "--s3", label: "30°", pts: rcs.map(s => [s, R.s30 * Math.pow(s / 10, 0.25)]) },
+      { name: "60° scan", color: "--s2", label: "60°", pts: rcs.map(s => [s, R.s60 * Math.pow(s / 10, 0.25)]) },
+    ],
+  }));
+
+  // active reflection
+  const E = D.em, th = E.theta_deg;
+  const planes = [["E-plane", "--s1"], ["H-plane", "--s2"], ["D-plane", "--s3"]];
+  const actCfg = {
+    title: "Active reflection vs scan angle", sub: "centre element, x-dipole port, minimax match over band and ±60°",
+    tabs: ["420 MHz", "435 MHz", "450 MHz"], tab: 1,
+    x: { domain: [0, 60], ticks: [0, 15, 30, 45, 60], fmt: t => t + "°", label: "scan angle", tip: v => `θ ${v}°` },
+    y: { domain: [-30, 0], ticks: [-30, -20, -10, 0], fmt: t => t + " dB", label: "|Γ| (dB)", tip: v => `${v.toFixed(1)} dB` },
+    refs: [{ y: -10, label: "−10 dB" }],
+  };
+  actCfg.series = () => {
+    const f = ["420", "435", "450"][actCfg.tab];
+    return planes.map(([p, c]) => ({ name: p, color: c, pts: th.map((t, i) => [t, E.active[f][p][i]]) }));
+  };
+  redraws.push(lineChart(document.getElementById("ch-active"), actCfg));
+
+  redraws.push(lineChart(document.getElementById("ch-eep"), {
+    title: "Embedded element pattern, 435 MHz", sub: "realised gain, neighbours terminated in their match",
+    x: { domain: [0, 90], ticks: [0, 30, 60, 90], fmt: t => t + "°", label: "angle from broadside", tip: v => `θ ${v}°` },
+    y: { domain: [-10, 8], ticks: [-10, -5, 0, 5], fmt: t => t + " dBi", label: "gain (dBi)", tip: v => `${v.toFixed(1)} dBi` },
+    series: () => [
+      { name: "E-plane", color: "--s1", pts: E.eep_theta.map((t, i) => [t, E.eep_E[i]]).filter(p => p[0] <= 88) },
+      { name: "H-plane", color: "--s2", pts: E.eep_theta.map((t, i) => [t, E.eep_H[i]]).filter(p => p[0] <= 88) },
+      { name: "ideal cell 4πA·cosθ/λ²", color: "--muted", dash: true, pts: E.eep_theta.filter(t => t <= 88).map(t => [t, E.ideal_db + 10 * Math.log10(Math.max(Math.cos(t * Math.PI / 180), 1e-3))]) },
+    ],
+  }));
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => redraws.forEach(f => f()));
+  new MutationObserver(() => redraws.forEach(f => f())).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+})();
+</script>

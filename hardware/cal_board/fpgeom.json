@@ -1,0 +1,432 @@
+{
+ "Capacitor_SMD:C_0603_1608Metric": {
+  "pads": [
+   {
+    "num": "1",
+    "x": -0.7749999999999999,
+    "y": 0.0,
+    "w": 0.8999999999999999,
+    "h": 0.95,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "2",
+    "x": 0.7749999999999999,
+    "y": 0.0,
+    "w": 0.8999999999999999,
+    "h": 0.95,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   }
+  ],
+  "courtyard": [
+   -1.505,
+   -0.755,
+   1.505,
+   0.755
+  ],
+  "cutouts": []
+ },
+ "MountingHole:MountingHole_3.2mm_M3_Pad": {
+  "pads": [
+   {
+    "num": "1",
+    "x": 0.0,
+    "y": 0.0,
+    "w": 6.3999999999999995,
+    "h": 6.3999999999999995,
+    "rot": 0.0,
+    "shape": "circle",
+    "tht": true,
+    "npth": false,
+    "drill": 3.1999999999999997,
+    "top": true,
+    "bottom": true
+   }
+  ],
+  "courtyard": [
+   -3.4749999999999996,
+   -3.4749999999999996,
+   3.4749999999999996,
+   3.4749999999999996
+  ],
+  "cutouts": []
+ },
+ "Connector_Coaxial:SMA_Amphenol_132289_EdgeMount": {
+  "pads": [
+   {
+    "num": "1",
+    "x": 0.0,
+    "y": 0.0,
+    "w": 1.5,
+    "h": 5.08,
+    "rot": 90.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "2",
+    "x": 0.0,
+    "y": -4.25,
+    "w": 1.5,
+    "h": 5.08,
+    "rot": 90.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "2",
+    "x": 0.0,
+    "y": -4.25,
+    "w": 1.5,
+    "h": 5.08,
+    "rot": 90.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": false,
+    "bottom": true
+   },
+   {
+    "num": "2",
+    "x": 0.0,
+    "y": 4.25,
+    "w": 1.5,
+    "h": 5.08,
+    "rot": 90.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "2",
+    "x": 0.0,
+    "y": 4.25,
+    "w": 1.5,
+    "h": 5.08,
+    "rot": 90.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": false,
+    "bottom": true
+   }
+  ],
+  "courtyard": [
+   -3.065,
+   -5.6049999999999995,
+   14.495,
+   5.6049999999999995
+  ],
+  "cutouts": []
+ },
+ "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical": {
+  "pads": [
+   {
+    "num": "1",
+    "x": 0.0,
+    "y": 0.0,
+    "w": 1.7,
+    "h": 1.7,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": true,
+    "npth": false,
+    "drill": 1.0,
+    "top": true,
+    "bottom": true
+   },
+   {
+    "num": "2",
+    "x": 2.54,
+    "y": 0.0,
+    "w": 1.7,
+    "h": 1.7,
+    "rot": 0.0,
+    "shape": "circle",
+    "tht": true,
+    "npth": false,
+    "drill": 1.0,
+    "top": true,
+    "bottom": true
+   },
+   {
+    "num": "3",
+    "x": 0.0,
+    "y": 2.54,
+    "w": 1.7,
+    "h": 1.7,
+    "rot": 0.0,
+    "shape": "circle",
+    "tht": true,
+    "npth": false,
+    "drill": 1.0,
+    "top": true,
+    "bottom": true
+   },
+   {
+    "num": "4",
+    "x": 2.54,
+    "y": 2.54,
+    "w": 1.7,
+    "h": 1.7,
+    "rot": 0.0,
+    "shape": "circle",
+    "tht": true,
+    "npth": false,
+    "drill": 1.0,
+    "top": true,
+    "bottom": true
+   },
+   {
+    "num": "5",
+    "x": 0.0,
+    "y": 5.08,
+    "w": 1.7,
+    "h": 1.7,
+    "rot": 0.0,
+    "shape": "circle",
+    "tht": true,
+    "npth": false,
+    "drill": 1.0,
+    "top": true,
+    "bottom": true
+   },
+   {
+    "num": "6",
+    "x": 2.54,
+    "y": 5.08,
+    "w": 1.7,
+    "h": 1.7,
+    "rot": 0.0,
+    "shape": "circle",
+    "tht": true,
+    "npth": false,
+    "drill": 1.0,
+    "top": true,
+    "bottom": true
+   },
+   {
+    "num": "7",
+    "x": 0.0,
+    "y": 7.619999999999999,
+    "w": 1.7,
+    "h": 1.7,
+    "rot": 0.0,
+    "shape": "circle",
+    "tht": true,
+    "npth": false,
+    "drill": 1.0,
+    "top": true,
+    "bottom": true
+   },
+   {
+    "num": "8",
+    "x": 2.54,
+    "y": 7.619999999999999,
+    "w": 1.7,
+    "h": 1.7,
+    "rot": 0.0,
+    "shape": "circle",
+    "tht": true,
+    "npth": false,
+    "drill": 1.0,
+    "top": true,
+    "bottom": true
+   },
+   {
+    "num": "9",
+    "x": 0.0,
+    "y": 10.16,
+    "w": 1.7,
+    "h": 1.7,
+    "rot": 0.0,
+    "shape": "circle",
+    "tht": true,
+    "npth": false,
+    "drill": 1.0,
+    "top": true,
+    "bottom": true
+   },
+   {
+    "num": "10",
+    "x": 2.54,
+    "y": 10.16,
+    "w": 1.7,
+    "h": 1.7,
+    "rot": 0.0,
+    "shape": "circle",
+    "tht": true,
+    "npth": false,
+    "drill": 1.0,
+    "top": true,
+    "bottom": true
+   }
+  ],
+  "courtyard": [
+   -1.795,
+   -1.795,
+   4.345,
+   11.955
+  ],
+  "cutouts": []
+ },
+ "Resistor_SMD:R_0603_1608Metric": {
+  "pads": [
+   {
+    "num": "1",
+    "x": -0.825,
+    "y": 0.0,
+    "w": 0.7999999999999999,
+    "h": 0.95,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "2",
+    "x": 0.825,
+    "y": 0.0,
+    "w": 0.7999999999999999,
+    "h": 0.95,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   }
+  ],
+  "courtyard": [
+   -1.505,
+   -0.755,
+   1.505,
+   0.755
+  ],
+  "cutouts": []
+ },
+ "Package_TO_SOT_SMD:SOT-363_SC-70-6": {
+  "pads": [
+   {
+    "num": "1",
+    "x": -0.8374999999999999,
+    "y": -0.65,
+    "w": 1.025,
+    "h": 0.35,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "2",
+    "x": -0.8374999999999999,
+    "y": 0.0,
+    "w": 1.025,
+    "h": 0.35,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "3",
+    "x": -0.8374999999999999,
+    "y": 0.65,
+    "w": 1.025,
+    "h": 0.35,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "4",
+    "x": 0.8374999999999999,
+    "y": 0.65,
+    "w": 1.025,
+    "h": 0.35,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "5",
+    "x": 0.8374999999999999,
+    "y": 0.0,
+    "w": 1.025,
+    "h": 0.35,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "6",
+    "x": 0.8374999999999999,
+    "y": -0.65,
+    "w": 1.025,
+    "h": 0.35,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   }
+  ],
+  "courtyard": [
+   -1.4749999999999999,
+   -1.125,
+   1.4749999999999999,
+   1.125
+  ],
+  "cutouts": []
+ }
+}

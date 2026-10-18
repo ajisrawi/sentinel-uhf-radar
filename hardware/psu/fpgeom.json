@@ -1,0 +1,1750 @@
+{
+ "Capacitor_THT:C_Rect_L26.5mm_W10.5mm_P22.50mm_MKS4": {
+  "pads": [
+   {
+    "num": "1",
+    "x": 0.0,
+    "y": 0.0,
+    "w": 2.4,
+    "h": 2.4,
+    "rot": 0.0,
+    "shape": "circle",
+    "tht": true,
+    "npth": false,
+    "drill": 1.2,
+    "top": true,
+    "bottom": true
+   },
+   {
+    "num": "2",
+    "x": 22.5,
+    "y": 0.0,
+    "w": 2.4,
+    "h": 2.4,
+    "rot": 0.0,
+    "shape": "circle",
+    "tht": true,
+    "npth": false,
+    "drill": 1.2,
+    "top": true,
+    "bottom": true
+   }
+  ],
+  "courtyard": [
+   -2.275,
+   -5.5249999999999995,
+   24.775,
+   5.5249999999999995
+  ],
+  "cutouts": []
+ },
+ "Capacitor_SMD:C_1210_3225Metric": {
+  "pads": [
+   {
+    "num": "1",
+    "x": -1.4749999999999999,
+    "y": 0.0,
+    "w": 1.15,
+    "h": 2.6999999999999997,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "2",
+    "x": 1.4749999999999999,
+    "y": 0.0,
+    "w": 1.15,
+    "h": 2.6999999999999997,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   }
+  ],
+  "courtyard": [
+   -2.3249999999999997,
+   -1.625,
+   2.3249999999999997,
+   1.625
+  ],
+  "cutouts": []
+ },
+ "Capacitor_SMD:C_0603_1608Metric": {
+  "pads": [
+   {
+    "num": "1",
+    "x": -0.7749999999999999,
+    "y": 0.0,
+    "w": 0.8999999999999999,
+    "h": 0.95,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "2",
+    "x": 0.7749999999999999,
+    "y": 0.0,
+    "w": 0.8999999999999999,
+    "h": 0.95,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   }
+  ],
+  "courtyard": [
+   -1.505,
+   -0.755,
+   1.505,
+   0.755
+  ],
+  "cutouts": []
+ },
+ "Capacitor_THT:CP_Radial_D18.0mm_P7.50mm": {
+  "pads": [
+   {
+    "num": "1",
+    "x": 0.0,
+    "y": 0.0,
+    "w": 2.4,
+    "h": 2.4,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": true,
+    "npth": false,
+    "drill": 1.2,
+    "top": true,
+    "bottom": true
+   },
+   {
+    "num": "2",
+    "x": 7.5,
+    "y": 0.0,
+    "w": 2.4,
+    "h": 2.4,
+    "rot": 0.0,
+    "shape": "circle",
+    "tht": true,
+    "npth": false,
+    "drill": 1.2,
+    "top": true,
+    "bottom": true
+   }
+  ],
+  "courtyard": [
+   -5.5249999999999995,
+   -9.275,
+   13.024999999999999,
+   9.275
+  ],
+  "cutouts": []
+ },
+ "Package_TO_SOT_THT:TO-247-2_Vertical": {
+  "pads": [
+   {
+    "num": "1",
+    "x": 0.0,
+    "y": 0.0,
+    "w": 2.5,
+    "h": 4.5,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": true,
+    "npth": false,
+    "drill": 1.5,
+    "top": true,
+    "bottom": true
+   },
+   {
+    "num": "2",
+    "x": 10.9,
+    "y": 0.0,
+    "w": 2.5,
+    "h": 4.5,
+    "rot": 0.0,
+    "shape": "oval",
+    "tht": true,
+    "npth": false,
+    "drill": 1.5,
+    "top": true,
+    "bottom": true
+   }
+  ],
+  "courtyard": [
+   -2.775,
+   -2.605,
+   13.674999999999999,
+   2.9749999999999996
+  ],
+  "cutouts": []
+ },
+ "Diode_SMD:D_SOD-123": {
+  "pads": [
+   {
+    "num": "1",
+    "x": -1.65,
+    "y": 0.0,
+    "w": 0.8999999999999999,
+    "h": 1.2,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "2",
+    "x": 1.65,
+    "y": 0.0,
+    "w": 0.8999999999999999,
+    "h": 1.2,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   }
+  ],
+  "courtyard": [
+   -2.375,
+   -1.175,
+   2.375,
+   1.175
+  ],
+  "cutouts": []
+ },
+ "LED_SMD:LED_0603_1608Metric": {
+  "pads": [
+   {
+    "num": "1",
+    "x": -0.7875,
+    "y": 0.0,
+    "w": 0.875,
+    "h": 0.95,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "2",
+    "x": 0.7875,
+    "y": 0.0,
+    "w": 0.875,
+    "h": 0.95,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   }
+  ],
+  "courtyard": [
+   -1.505,
+   -0.755,
+   1.505,
+   0.755
+  ],
+  "cutouts": []
+ },
+ "SENTINEL:Fuse_Clips_5x20": {
+  "pads": [
+   {
+    "num": "1",
+    "x": -11.299999999999999,
+    "y": 0.0,
+    "w": 3.0,
+    "h": 3.0,
+    "rot": 0.0,
+    "shape": "circle",
+    "tht": true,
+    "npth": false,
+    "drill": 1.5,
+    "top": true,
+    "bottom": true
+   },
+   {
+    "num": "2",
+    "x": 11.299999999999999,
+    "y": 0.0,
+    "w": 3.0,
+    "h": 3.0,
+    "rot": 0.0,
+    "shape": "circle",
+    "tht": true,
+    "npth": false,
+    "drill": 1.5,
+    "top": true,
+    "bottom": true
+   }
+  ],
+  "courtyard": [
+   -13.524999999999999,
+   -3.525,
+   13.524999999999999,
+   3.525
+  ],
+  "cutouts": []
+ },
+ "MountingHole:MountingHole_3.2mm_M3_Pad": {
+  "pads": [
+   {
+    "num": "1",
+    "x": 0.0,
+    "y": 0.0,
+    "w": 6.3999999999999995,
+    "h": 6.3999999999999995,
+    "rot": 0.0,
+    "shape": "circle",
+    "tht": true,
+    "npth": false,
+    "drill": 3.1999999999999997,
+    "top": true,
+    "bottom": true
+   }
+  ],
+  "courtyard": [
+   -3.4749999999999996,
+   -3.4749999999999996,
+   3.4749999999999996,
+   3.4749999999999996
+  ],
+  "cutouts": []
+ },
+ "SENTINEL:Terminal_HV_2P_7.62": {
+  "pads": [
+   {
+    "num": "1",
+    "x": -3.8099999999999996,
+    "y": 0.0,
+    "w": 3.1999999999999997,
+    "h": 3.1999999999999997,
+    "rot": 0.0,
+    "shape": "circle",
+    "tht": true,
+    "npth": false,
+    "drill": 1.5999999999999999,
+    "top": true,
+    "bottom": true
+   },
+   {
+    "num": "2",
+    "x": 3.8099999999999996,
+    "y": 0.0,
+    "w": 3.1999999999999997,
+    "h": 3.1999999999999997,
+    "rot": 0.0,
+    "shape": "circle",
+    "tht": true,
+    "npth": false,
+    "drill": 1.5999999999999999,
+    "top": true,
+    "bottom": true
+   }
+  ],
+  "courtyard": [
+   -7.5249999999999995,
+   -5.0249999999999995,
+   7.5249999999999995,
+   5.0249999999999995
+  ],
+  "cutouts": []
+ },
+ "SENTINEL:Stud_M6": {
+  "pads": [
+   {
+    "num": "1",
+    "x": 0.0,
+    "y": 0.0,
+    "w": 12.0,
+    "h": 12.0,
+    "rot": 0.0,
+    "shape": "circle",
+    "tht": true,
+    "npth": false,
+    "drill": 6.5,
+    "top": true,
+    "bottom": true
+   }
+  ],
+  "courtyard": [
+   -6.5249999999999995,
+   -6.5249999999999995,
+   6.5249999999999995,
+   6.5249999999999995
+  ],
+  "cutouts": []
+ },
+ "Connector_Molex:Molex_Mini-Fit_Jr_5566-02A_2x01_P4.20mm_Vertical": {
+  "pads": [
+   {
+    "num": "1",
+    "x": 0.0,
+    "y": 0.0,
+    "w": 2.6999999999999997,
+    "h": 3.3,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": true,
+    "npth": false,
+    "drill": 1.4,
+    "top": true,
+    "bottom": true
+   },
+   {
+    "num": "2",
+    "x": 0.0,
+    "y": 5.5,
+    "w": 2.6999999999999997,
+    "h": 3.3,
+    "rot": 0.0,
+    "shape": "oval",
+    "tht": true,
+    "npth": false,
+    "drill": 1.4,
+    "top": true,
+    "bottom": true
+   }
+  ],
+  "courtyard": [
+   -3.2249999999999996,
+   -2.775,
+   3.2249999999999996,
+   9.275
+  ],
+  "cutouts": []
+ },
+ "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical": {
+  "pads": [
+   {
+    "num": "1",
+    "x": 0.0,
+    "y": 0.0,
+    "w": 1.7,
+    "h": 1.7,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": true,
+    "npth": false,
+    "drill": 1.0,
+    "top": true,
+    "bottom": true
+   },
+   {
+    "num": "2",
+    "x": 0.0,
+    "y": 2.54,
+    "w": 1.7,
+    "h": 1.7,
+    "rot": 0.0,
+    "shape": "circle",
+    "tht": true,
+    "npth": false,
+    "drill": 1.0,
+    "top": true,
+    "bottom": true
+   },
+   {
+    "num": "3",
+    "x": 0.0,
+    "y": 5.08,
+    "w": 1.7,
+    "h": 1.7,
+    "rot": 0.0,
+    "shape": "circle",
+    "tht": true,
+    "npth": false,
+    "drill": 1.0,
+    "top": true,
+    "bottom": true
+   },
+   {
+    "num": "4",
+    "x": 0.0,
+    "y": 7.619999999999999,
+    "w": 1.7,
+    "h": 1.7,
+    "rot": 0.0,
+    "shape": "circle",
+    "tht": true,
+    "npth": false,
+    "drill": 1.0,
+    "top": true,
+    "bottom": true
+   }
+  ],
+  "courtyard": [
+   -1.795,
+   -1.795,
+   1.795,
+   9.415
+  ],
+  "cutouts": []
+ },
+ "Relay_THT:Relay_SPST_Omron_G2RL-1A": {
+  "pads": [
+   {
+    "num": "13",
+    "x": 7.5,
+    "y": 20.0,
+    "w": 2.0,
+    "h": 2.0,
+    "rot": 0.0,
+    "shape": "circle",
+    "tht": true,
+    "npth": false,
+    "drill": 1.3,
+    "top": true,
+    "bottom": true
+   },
+   {
+    "num": "14",
+    "x": 0.0,
+    "y": 23.5,
+    "w": 2.0,
+    "h": 2.0,
+    "rot": 0.0,
+    "shape": "circle",
+    "tht": true,
+    "npth": false,
+    "drill": 1.3,
+    "top": true,
+    "bottom": true
+   },
+   {
+    "num": "A1",
+    "x": 0.0,
+    "y": 0.0,
+    "w": 2.0,
+    "h": 2.0,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": true,
+    "npth": false,
+    "drill": 1.3,
+    "top": true,
+    "bottom": true
+   },
+   {
+    "num": "A2",
+    "x": 7.5,
+    "y": 0.0,
+    "w": 2.0,
+    "h": 2.0,
+    "rot": 0.0,
+    "shape": "circle",
+    "tht": true,
+    "npth": false,
+    "drill": 1.3,
+    "top": true,
+    "bottom": true
+   }
+  ],
+  "courtyard": [
+   -2.775,
+   -2.5749999999999997,
+   10.275,
+   26.775
+  ],
+  "cutouts": []
+ },
+ "Package_TO_SOT_SMD:SOT-23": {
+  "pads": [
+   {
+    "num": "1",
+    "x": -0.9375,
+    "y": -0.95,
+    "w": 1.4749999999999999,
+    "h": 0.6,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "2",
+    "x": -0.9375,
+    "y": 0.95,
+    "w": 1.4749999999999999,
+    "h": 0.6,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "3",
+    "x": 0.9375,
+    "y": 0.0,
+    "w": 1.4749999999999999,
+    "h": 0.6,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   }
+  ],
+  "courtyard": [
+   -1.9549999999999998,
+   -1.7249999999999999,
+   1.9549999999999998,
+   1.7249999999999999
+  ],
+  "cutouts": []
+ },
+ "Resistor_SMD:R_0603_1608Metric": {
+  "pads": [
+   {
+    "num": "1",
+    "x": -0.825,
+    "y": 0.0,
+    "w": 0.7999999999999999,
+    "h": 0.95,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "2",
+    "x": 0.825,
+    "y": 0.0,
+    "w": 0.7999999999999999,
+    "h": 0.95,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   }
+  ],
+  "courtyard": [
+   -1.505,
+   -0.755,
+   1.505,
+   0.755
+  ],
+  "cutouts": []
+ },
+ "Resistor_SMD:R_2512_6332Metric": {
+  "pads": [
+   {
+    "num": "1",
+    "x": -2.9625,
+    "y": 0.0,
+    "w": 1.2249999999999999,
+    "h": 3.3499999999999996,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "2",
+    "x": 2.9625,
+    "y": 0.0,
+    "w": 1.2249999999999999,
+    "h": 3.3499999999999996,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   }
+  ],
+  "courtyard": [
+   -3.855,
+   -1.9549999999999998,
+   3.855,
+   1.9549999999999998
+  ],
+  "cutouts": []
+ },
+ "SENTINEL:NTC_Disc_D15_P7.5": {
+  "pads": [
+   {
+    "num": "1",
+    "x": -3.75,
+    "y": 0.0,
+    "w": 2.4,
+    "h": 2.4,
+    "rot": 0.0,
+    "shape": "circle",
+    "tht": true,
+    "npth": false,
+    "drill": 1.2,
+    "top": true,
+    "bottom": true
+   },
+   {
+    "num": "2",
+    "x": 3.75,
+    "y": 0.0,
+    "w": 2.4,
+    "h": 2.4,
+    "rot": 0.0,
+    "shape": "circle",
+    "tht": true,
+    "npth": false,
+    "drill": 1.2,
+    "top": true,
+    "bottom": true
+   }
+  ],
+  "courtyard": [
+   -8.525,
+   -4.0249999999999995,
+   8.525,
+   4.0249999999999995
+  ],
+  "cutouts": []
+ },
+ "SENTINEL:Brick_Full_THT": {
+  "pads": [
+   {
+    "num": "1",
+    "x": -53.339999999999996,
+    "y": -17.779999999999998,
+    "w": 3.1999999999999997,
+    "h": 3.1999999999999997,
+    "rot": 0.0,
+    "shape": "circle",
+    "tht": true,
+    "npth": false,
+    "drill": 1.5999999999999999,
+    "top": true,
+    "bottom": true
+   },
+   {
+    "num": "2",
+    "x": -53.339999999999996,
+    "y": -7.619999999999999,
+    "w": 2.0,
+    "h": 2.0,
+    "rot": 0.0,
+    "shape": "circle",
+    "tht": true,
+    "npth": false,
+    "drill": 1.0,
+    "top": true,
+    "bottom": true
+   },
+   {
+    "num": "3",
+    "x": -53.339999999999996,
+    "y": 17.779999999999998,
+    "w": 3.1999999999999997,
+    "h": 3.1999999999999997,
+    "rot": 0.0,
+    "shape": "circle",
+    "tht": true,
+    "npth": false,
+    "drill": 1.5999999999999999,
+    "top": true,
+    "bottom": true
+   },
+   {
+    "num": "4",
+    "x": 53.339999999999996,
+    "y": 20.32,
+    "w": 4.5,
+    "h": 4.5,
+    "rot": 0.0,
+    "shape": "circle",
+    "tht": true,
+    "npth": false,
+    "drill": 2.5,
+    "top": true,
+    "bottom": true
+   },
+   {
+    "num": "5",
+    "x": 53.339999999999996,
+    "y": 10.16,
+    "w": 2.0,
+    "h": 2.0,
+    "rot": 0.0,
+    "shape": "circle",
+    "tht": true,
+    "npth": false,
+    "drill": 1.0,
+    "top": true,
+    "bottom": true
+   },
+   {
+    "num": "6",
+    "x": 53.339999999999996,
+    "y": 2.54,
+    "w": 2.0,
+    "h": 2.0,
+    "rot": 0.0,
+    "shape": "circle",
+    "tht": true,
+    "npth": false,
+    "drill": 1.0,
+    "top": true,
+    "bottom": true
+   },
+   {
+    "num": "7",
+    "x": 53.339999999999996,
+    "y": -5.08,
+    "w": 2.0,
+    "h": 2.0,
+    "rot": 0.0,
+    "shape": "circle",
+    "tht": true,
+    "npth": false,
+    "drill": 1.0,
+    "top": true,
+    "bottom": true
+   },
+   {
+    "num": "8",
+    "x": 53.339999999999996,
+    "y": -15.239999999999998,
+    "w": 4.5,
+    "h": 4.5,
+    "rot": 0.0,
+    "shape": "circle",
+    "tht": true,
+    "npth": false,
+    "drill": 2.5,
+    "top": true,
+    "bottom": true
+   },
+   {
+    "num": "9",
+    "x": 53.339999999999996,
+    "y": -25.4,
+    "w": 2.0,
+    "h": 2.0,
+    "rot": 0.0,
+    "shape": "circle",
+    "tht": true,
+    "npth": false,
+    "drill": 1.0,
+    "top": true,
+    "bottom": true
+   }
+  ],
+  "courtyard": [
+   -59.025,
+   -31.025,
+   59.025,
+   31.025
+  ],
+  "cutouts": []
+ },
+ "Package_DIP:SMDIP-4_W7.62mm": {
+  "pads": [
+   {
+    "num": "1",
+    "x": -3.8099999999999996,
+    "y": -1.27,
+    "w": 2.0,
+    "h": 1.78,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "2",
+    "x": -3.8099999999999996,
+    "y": 1.27,
+    "w": 2.0,
+    "h": 1.78,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "3",
+    "x": 3.8099999999999996,
+    "y": 1.27,
+    "w": 2.0,
+    "h": 1.78,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "4",
+    "x": 3.8099999999999996,
+    "y": -1.27,
+    "w": 2.0,
+    "h": 1.78,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   }
+  ],
+  "courtyard": [
+   -5.095,
+   -2.815,
+   5.095,
+   2.815
+  ],
+  "cutouts": []
+ },
+ "SENTINEL:Brick_16_THT": {
+  "pads": [
+   {
+    "num": "1",
+    "x": -15.239999999999998,
+    "y": -7.619999999999999,
+    "w": 2.1999999999999997,
+    "h": 2.1999999999999997,
+    "rot": 0.0,
+    "shape": "circle",
+    "tht": true,
+    "npth": false,
+    "drill": 1.0999999999999999,
+    "top": true,
+    "bottom": true
+   },
+   {
+    "num": "2",
+    "x": -15.239999999999998,
+    "y": 0.0,
+    "w": 2.1999999999999997,
+    "h": 2.1999999999999997,
+    "rot": 0.0,
+    "shape": "circle",
+    "tht": true,
+    "npth": false,
+    "drill": 1.0999999999999999,
+    "top": true,
+    "bottom": true
+   },
+   {
+    "num": "3",
+    "x": -15.239999999999998,
+    "y": 7.619999999999999,
+    "w": 2.1999999999999997,
+    "h": 2.1999999999999997,
+    "rot": 0.0,
+    "shape": "circle",
+    "tht": true,
+    "npth": false,
+    "drill": 1.0999999999999999,
+    "top": true,
+    "bottom": true
+   },
+   {
+    "num": "4",
+    "x": 15.239999999999998,
+    "y": 7.619999999999999,
+    "w": 2.1999999999999997,
+    "h": 2.1999999999999997,
+    "rot": 0.0,
+    "shape": "circle",
+    "tht": true,
+    "npth": false,
+    "drill": 1.0999999999999999,
+    "top": true,
+    "bottom": true
+   },
+   {
+    "num": "5",
+    "x": 15.239999999999998,
+    "y": 0.0,
+    "w": 2.1999999999999997,
+    "h": 2.1999999999999997,
+    "rot": 0.0,
+    "shape": "circle",
+    "tht": true,
+    "npth": false,
+    "drill": 1.0999999999999999,
+    "top": true,
+    "bottom": true
+   },
+   {
+    "num": "6",
+    "x": 15.239999999999998,
+    "y": -7.619999999999999,
+    "w": 2.1999999999999997,
+    "h": 2.1999999999999997,
+    "rot": 0.0,
+    "shape": "circle",
+    "tht": true,
+    "npth": false,
+    "drill": 1.0999999999999999,
+    "top": true,
+    "bottom": true
+   }
+  ],
+  "courtyard": [
+   -17.025,
+   -12.024999999999999,
+   17.025,
+   12.024999999999999
+  ],
+  "cutouts": []
+ },
+ "Package_TO_SOT_SMD:TO-252-3_TabPin2": {
+  "pads": [
+   {
+    "num": "",
+    "x": -0.415,
+    "y": -1.525,
+    "w": 3.05,
+    "h": 2.75,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": false,
+    "bottom": false
+   },
+   {
+    "num": "",
+    "x": -0.415,
+    "y": 1.525,
+    "w": 3.05,
+    "h": 2.75,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": false,
+    "bottom": false
+   },
+   {
+    "num": "",
+    "x": 2.935,
+    "y": -1.525,
+    "w": 3.05,
+    "h": 2.75,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": false,
+    "bottom": false
+   },
+   {
+    "num": "",
+    "x": 2.935,
+    "y": 1.525,
+    "w": 3.05,
+    "h": 2.75,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": false,
+    "bottom": false
+   },
+   {
+    "num": "1",
+    "x": -5.04,
+    "y": -2.28,
+    "w": 2.1999999999999997,
+    "h": 1.2,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "2",
+    "x": -5.04,
+    "y": 0.0,
+    "w": 2.1999999999999997,
+    "h": 1.2,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "2",
+    "x": 1.26,
+    "y": 0.0,
+    "w": 6.3999999999999995,
+    "h": 5.8,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "3",
+    "x": -5.04,
+    "y": 2.28,
+    "w": 2.1999999999999997,
+    "h": 1.2,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   }
+  ],
+  "courtyard": [
+   -6.415,
+   -3.525,
+   4.734999999999999,
+   3.525
+  ],
+  "cutouts": []
+ },
+ "Package_QFP:LQFP-32_7x7mm_P0.8mm": {
+  "pads": [
+   {
+    "num": "1",
+    "x": -4.175,
+    "y": -2.8,
+    "w": 1.5,
+    "h": 0.5,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "2",
+    "x": -4.175,
+    "y": -2.0,
+    "w": 1.5,
+    "h": 0.5,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "3",
+    "x": -4.175,
+    "y": -1.2,
+    "w": 1.5,
+    "h": 0.5,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "4",
+    "x": -4.175,
+    "y": -0.39999999999999997,
+    "w": 1.5,
+    "h": 0.5,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "5",
+    "x": -4.175,
+    "y": 0.39999999999999997,
+    "w": 1.5,
+    "h": 0.5,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "6",
+    "x": -4.175,
+    "y": 1.2,
+    "w": 1.5,
+    "h": 0.5,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "7",
+    "x": -4.175,
+    "y": 2.0,
+    "w": 1.5,
+    "h": 0.5,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "8",
+    "x": -4.175,
+    "y": 2.8,
+    "w": 1.5,
+    "h": 0.5,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "9",
+    "x": -2.8,
+    "y": 4.175,
+    "w": 0.5,
+    "h": 1.5,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "10",
+    "x": -2.0,
+    "y": 4.175,
+    "w": 0.5,
+    "h": 1.5,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "11",
+    "x": -1.2,
+    "y": 4.175,
+    "w": 0.5,
+    "h": 1.5,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "12",
+    "x": -0.39999999999999997,
+    "y": 4.175,
+    "w": 0.5,
+    "h": 1.5,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "13",
+    "x": 0.39999999999999997,
+    "y": 4.175,
+    "w": 0.5,
+    "h": 1.5,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "14",
+    "x": 1.2,
+    "y": 4.175,
+    "w": 0.5,
+    "h": 1.5,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "15",
+    "x": 2.0,
+    "y": 4.175,
+    "w": 0.5,
+    "h": 1.5,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "16",
+    "x": 2.8,
+    "y": 4.175,
+    "w": 0.5,
+    "h": 1.5,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "17",
+    "x": 4.175,
+    "y": 2.8,
+    "w": 1.5,
+    "h": 0.5,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "18",
+    "x": 4.175,
+    "y": 2.0,
+    "w": 1.5,
+    "h": 0.5,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "19",
+    "x": 4.175,
+    "y": 1.2,
+    "w": 1.5,
+    "h": 0.5,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "20",
+    "x": 4.175,
+    "y": 0.39999999999999997,
+    "w": 1.5,
+    "h": 0.5,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "21",
+    "x": 4.175,
+    "y": -0.39999999999999997,
+    "w": 1.5,
+    "h": 0.5,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "22",
+    "x": 4.175,
+    "y": -1.2,
+    "w": 1.5,
+    "h": 0.5,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "23",
+    "x": 4.175,
+    "y": -2.0,
+    "w": 1.5,
+    "h": 0.5,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "24",
+    "x": 4.175,
+    "y": -2.8,
+    "w": 1.5,
+    "h": 0.5,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "25",
+    "x": 2.8,
+    "y": -4.175,
+    "w": 0.5,
+    "h": 1.5,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "26",
+    "x": 2.0,
+    "y": -4.175,
+    "w": 0.5,
+    "h": 1.5,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "27",
+    "x": 1.2,
+    "y": -4.175,
+    "w": 0.5,
+    "h": 1.5,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "28",
+    "x": 0.39999999999999997,
+    "y": -4.175,
+    "w": 0.5,
+    "h": 1.5,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "29",
+    "x": -0.39999999999999997,
+    "y": -4.175,
+    "w": 0.5,
+    "h": 1.5,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "30",
+    "x": -1.2,
+    "y": -4.175,
+    "w": 0.5,
+    "h": 1.5,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "31",
+    "x": -2.0,
+    "y": -4.175,
+    "w": 0.5,
+    "h": 1.5,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "32",
+    "x": -2.8,
+    "y": -4.175,
+    "w": 0.5,
+    "h": 1.5,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   }
+  ],
+  "courtyard": [
+   -5.205,
+   -5.205,
+   5.205,
+   5.205
+  ],
+  "cutouts": []
+ },
+ "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm": {
+  "pads": [
+   {
+    "num": "1",
+    "x": -2.475,
+    "y": -1.9049999999999998,
+    "w": 1.95,
+    "h": 0.6,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "2",
+    "x": -2.475,
+    "y": -0.635,
+    "w": 1.95,
+    "h": 0.6,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "3",
+    "x": -2.475,
+    "y": 0.635,
+    "w": 1.95,
+    "h": 0.6,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "4",
+    "x": -2.475,
+    "y": 1.9049999999999998,
+    "w": 1.95,
+    "h": 0.6,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "5",
+    "x": 2.475,
+    "y": 1.9049999999999998,
+    "w": 1.95,
+    "h": 0.6,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "6",
+    "x": 2.475,
+    "y": 0.635,
+    "w": 1.95,
+    "h": 0.6,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "7",
+    "x": 2.475,
+    "y": -0.635,
+    "w": 1.95,
+    "h": 0.6,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "8",
+    "x": 2.475,
+    "y": -1.9049999999999998,
+    "w": 1.95,
+    "h": 0.6,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   }
+  ],
+  "courtyard": [
+   -3.7249999999999996,
+   -2.725,
+   3.7249999999999996,
+   2.725
+  ],
+  "cutouts": []
+ }
+}

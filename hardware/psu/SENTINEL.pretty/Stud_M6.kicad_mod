@@ -1,0 +1,11 @@
+(footprint "Stud_M6"
+	(version 20260206)
+	(generator "fpgen")
+	(layer "F.Cu")
+	(descr "M6 press-fit busbar stud, 60 A")
+	(property "Reference" "REF**" (at 0 -8.0 0) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15))))
+	(property "Value" "Stud_M6" (at 0 8.0 0) (layer "F.Fab") (effects (font (size 1 1) (thickness 0.15))))
+	(attr through_hole)
+	(pad "1" thru_hole circle (at 0 0) (size 12.0 12.0) (drill 6.5) (layers "*.Cu" "*.Mask"))
+	(fp_rect (start -6.5 -6.5) (end 6.5 6.5) (stroke (width 0.05) (type solid)) (fill no) (layer "F.CrtYd"))
+)

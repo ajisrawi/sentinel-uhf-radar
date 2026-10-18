@@ -1,0 +1,394 @@
+[
+[
+"C1",
+"10u 450V",
+"Capacitor_THT:C_Rect_L26.5mm_W10.5mm_P22.50mm_MKS4",
+"Input film capacitor",
+""
+],
+[
+"C10",
+"10u",
+"Capacitor_SMD:C_1210_3225Metric",
+"",
+""
+],
+[
+"C11",
+"10u",
+"Capacitor_SMD:C_1210_3225Metric",
+"",
+""
+],
+[
+"C12",
+"100n",
+"Capacitor_SMD:C_0603_1608Metric",
+"",
+""
+],
+[
+"C13",
+"100n",
+"Capacitor_SMD:C_0603_1608Metric",
+"",
+""
+],
+[
+"C14",
+"100n",
+"Capacitor_SMD:C_0603_1608Metric",
+"",
+""
+],
+[
+"C2",
+"10u 450V",
+"Capacitor_THT:C_Rect_L26.5mm_W10.5mm_P22.50mm_MKS4",
+"Input film capacitor",
+""
+],
+[
+"C3",
+"1000u 63V",
+"Capacitor_THT:CP_Radial_D18.0mm_P7.50mm",
+"Output bulk",
+""
+],
+[
+"C4",
+"1000u 63V",
+"Capacitor_THT:CP_Radial_D18.0mm_P7.50mm",
+"Output bulk",
+""
+],
+[
+"C5",
+"1000u 63V",
+"Capacitor_THT:CP_Radial_D18.0mm_P7.50mm",
+"Output bulk",
+""
+],
+[
+"C6",
+"1000u 63V",
+"Capacitor_THT:CP_Radial_D18.0mm_P7.50mm",
+"Output bulk",
+""
+],
+[
+"C7",
+"10u 100V",
+"Capacitor_SMD:C_1210_3225Metric",
+"",
+""
+],
+[
+"C8",
+"10n",
+"Capacitor_SMD:C_0603_1608Metric",
+"",
+""
+],
+[
+"C9",
+"22u 25V",
+"Capacitor_SMD:C_1210_3225Metric",
+"",
+""
+],
+[
+"D1",
+"100V 60A",
+"Package_TO_SOT_THT:TO-247-2_Vertical",
+"Output OR-ing diode",
+""
+],
+[
+"D2",
+"100V 60A",
+"Package_TO_SOT_THT:TO-247-2_Vertical",
+"Output OR-ing diode",
+""
+],
+[
+"D3",
+"1N4148W",
+"Diode_SMD:D_SOD-123",
+"Relay flyback",
+""
+],
+[
+"D4",
+"GRN",
+"LED_SMD:LED_0603_1608Metric",
+"",
+""
+],
+[
+"F1",
+"6.3A 500V",
+"SENTINEL:Fuse_Clips_5x20",
+"Input fuse, 500 VDC rated",
+""
+],
+[
+"H1",
+"M4",
+"MountingHole:MountingHole_3.2mm_M3_Pad",
+"",
+""
+],
+[
+"H2",
+"M4",
+"MountingHole:MountingHole_3.2mm_M3_Pad",
+"",
+""
+],
+[
+"H3",
+"M4",
+"MountingHole:MountingHole_3.2mm_M3_Pad",
+"",
+""
+],
+[
+"H4",
+"M4",
+"MountingHole:MountingHole_3.2mm_M3_Pad",
+"",
+""
+],
+[
+"J1",
+"380VDC IN",
+"SENTINEL:Terminal_HV_2P_7.62",
+"380 VDC site distribution bus",
+""
+],
+[
+"J2",
+"+50V STUD",
+"SENTINEL:Stud_M6",
+"M6 stud: capacitor bank + and backplane 50 V",
+""
+],
+[
+"J3",
+"0V STUD",
+"SENTINEL:Stud_M6",
+"M6 stud: return",
+""
+],
+[
+"J4",
+"12V OUT",
+"Connector_Molex:Molex_Mini-Fit_Jr_5566-02A_2x01_P4.20mm_Vertical",
+"12 V aux to backplane",
+""
+],
+[
+"J5",
+"RS485",
+"Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical",
+"Telemetry to tile controller",
+""
+],
+[
+"J6",
+"SWD",
+"Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical",
+"",
+""
+],
+[
+"K1",
+"G2RL-1A 12V",
+"Relay_THT:Relay_SPST_Omron_G2RL-1A",
+"Inrush bypass relay, 5 kV coil-contact",
+""
+],
+[
+"Q1",
+"2N7002",
+"Package_TO_SOT_SMD:SOT-23",
+"",
+""
+],
+[
+"R1",
+"470",
+"Resistor_SMD:R_0603_1608Metric",
+"",
+""
+],
+[
+"R10",
+"10k",
+"Resistor_SMD:R_0603_1608Metric",
+"",
+""
+],
+[
+"R11",
+"100",
+"Resistor_SMD:R_0603_1608Metric",
+"",
+""
+],
+[
+"R12",
+"100k",
+"Resistor_SMD:R_0603_1608Metric",
+"",
+""
+],
+[
+"R13",
+"1k",
+"Resistor_SMD:R_0603_1608Metric",
+"",
+""
+],
+[
+"R2",
+"470",
+"Resistor_SMD:R_0603_1608Metric",
+"",
+""
+],
+[
+"R3",
+"trim",
+"Resistor_SMD:R_0603_1608Metric",
+"Trim-up to 50.0 V per vendor formula",
+"value per brick datasheet"
+],
+[
+"R4",
+"trim",
+"Resistor_SMD:R_0603_1608Metric",
+"Trim-up to 50.0 V per vendor formula",
+"value per brick datasheet"
+],
+[
+"R5",
+"10k",
+"Resistor_SMD:R_0603_1608Metric",
+"",
+""
+],
+[
+"R6",
+"10k",
+"Resistor_SMD:R_0603_1608Metric",
+"",
+""
+],
+[
+"R7",
+"1m",
+"Resistor_SMD:R_2512_6332Metric",
+"Brick current shunt",
+""
+],
+[
+"R8",
+"1k",
+"Resistor_SMD:R_0603_1608Metric",
+"",
+""
+],
+[
+"R9",
+"200k",
+"Resistor_SMD:R_0603_1608Metric",
+"",
+""
+],
+[
+"RT1",
+"10R NTC",
+"SENTINEL:NTC_Disc_D15_P7.5",
+"Inrush limiter, bypassed by K1 after precharge",
+""
+],
+[
+"TH1",
+"10k NTC",
+"Resistor_SMD:R_0603_1608Metric",
+"Brick 1 baseplate temperature",
+""
+],
+[
+"TH2",
+"10k NTC",
+"Resistor_SMD:R_0603_1608Metric",
+"Brick 2 baseplate temperature",
+""
+],
+[
+"U1",
+"380V->50V 600W",
+"SENTINEL:Brick_Full_THT",
+"Isolated full brick, 380 V in, 50 V / 12 A out, current share",
+""
+],
+[
+"U2",
+"380V->50V 600W",
+"SENTINEL:Brick_Full_THT",
+"Isolated full brick, 380 V in, 50 V / 12 A out, current share",
+""
+],
+[
+"U3",
+"PC817",
+"Package_DIP:SMDIP-4_W7.62mm",
+"Brick enable across the isolation barrier",
+""
+],
+[
+"U4",
+"PC817",
+"Package_DIP:SMDIP-4_W7.62mm",
+"Brick enable across the isolation barrier",
+""
+],
+[
+"U5",
+"48V->12V 50W",
+"SENTINEL:Brick_16_THT",
+"12 V aux for modules and relay",
+""
+],
+[
+"U6",
+"LM1117-3.3",
+"Package_TO_SOT_SMD:TO-252-3_TabPin2",
+"",
+""
+],
+[
+"U7",
+"STM32G031K8T6",
+"Package_QFP:LQFP-32_7x7mm_P0.8mm",
+"Supervisor: soft start, OV/UV, current, temperature, telemetry",
+""
+],
+[
+"U8",
+"THVD1450",
+"Package_SO:SOIC-8_3.9x4.9mm_P1.27mm",
+"",
+""
+],
+[
+"U9",
+"INA240A1",
+"Package_SO:SOIC-8_3.9x4.9mm_P1.27mm",
+"",
+""
+]
+]

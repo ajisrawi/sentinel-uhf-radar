@@ -1,0 +1,31 @@
+# KiCad per-user and generated caches
+*.kicad_prl
+*-backups/
+fp-info-cache
+*.lck
+
+# Python
+__pycache__/
+*.pyc
+
+# run logs and scratch results
+*_log.txt
+*_result.txt
+
+# Blender autosave and superseded renders
+*.blend1
+render/sentinel_night.jpg
+render/sentinel_aerial.jpg
+render/pixelcut_site_1.jpg
+render/pixelcut_site_2.jpg
+
+# large intermediate exports (the PDF is the schematic deliverable)
+hardware/*/export/*.svg
+hardware/*/export/pcb_3d.png
+
+# T/R module scripts superseded by hardware/tools/
+hardware/tr_module/pcb_plan_legacy.py
+hardware/tr_module/pcb_build.py
+hardware/tr_module/pcb_dump.py
+hardware/tr_module/check.sh
+hardware/tr_module/verify_netlist.py

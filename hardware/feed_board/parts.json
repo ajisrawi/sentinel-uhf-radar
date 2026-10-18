@@ -1,0 +1,135 @@
+[
+[
+"C1",
+"DNP",
+"Capacitor_SMD:C_2220_5750Metric",
+"X match shunt, 500 V",
+""
+],
+[
+"C2",
+"tune",
+"Capacitor_SMD:C_2220_5750Metric",
+"Bench trim, fit if needed",
+"DNP"
+],
+[
+"C3",
+"3.9p",
+"Capacitor_SMD:C_2220_5750Metric",
+"Y match shunt, 500 V",
+""
+],
+[
+"C4",
+"tune",
+"Capacitor_SMD:C_2220_5750Metric",
+"Bench trim, fit if needed",
+"DNP"
+],
+[
+"H1",
+"M3",
+"MountingHole:MountingHole_3.2mm_M3_Pad",
+"",
+""
+],
+[
+"H2",
+"M3",
+"MountingHole:MountingHole_3.2mm_M3_Pad",
+"",
+""
+],
+[
+"J1",
+"FROM T/R",
+"SENTINEL:N_EdgeLaunch",
+"N-type from T/R module ANT port, 300 W pk",
+""
+],
+[
+"J2",
+"DIPOLE X",
+"SENTINEL:DipoleArm_M4_Pair",
+"X dipole arms, M4 lugs",
+""
+],
+[
+"J3",
+"DIPOLE Y",
+"SENTINEL:DipoleArm_M4_Pair",
+"Y dipole arms, M4 lugs",
+""
+],
+[
+"L1",
+"11.2n",
+"Inductor_SMD:L_1210_3225Metric",
+"X match series",
+""
+],
+[
+"L2",
+"20.7n",
+"Inductor_SMD:L_1210_3225Metric",
+"Y match series",
+""
+],
+[
+"L3",
+"1u",
+"Inductor_SMD:L_0805_2012Metric",
+"Static bleed",
+""
+],
+[
+"L4",
+"1u",
+"Inductor_SMD:L_0805_2012Metric",
+"Static bleed",
+""
+],
+[
+"L5",
+"1u",
+"Inductor_SMD:L_0805_2012Metric",
+"Static bleed",
+""
+],
+[
+"L6",
+"1u",
+"Inductor_SMD:L_0805_2012Metric",
+"Static bleed",
+""
+],
+[
+"R1",
+"50 100W",
+"SENTINEL:Termination_100W_SMD",
+"Isolated-port load, 100 W",
+""
+],
+[
+"T1",
+"1:1",
+"SENTINEL:Balun_SMD_10x8",
+"1:1 balun, 200 W pk",
+""
+],
+[
+"T2",
+"1:1",
+"SENTINEL:Balun_SMD_10x8",
+"1:1 balun, 200 W pk",
+""
+],
+[
+"U1",
+"HYB 3dB",
+"SENTINEL:Hybrid90_SMD_15x10",
+"3 dB 90 deg hybrid, 420-450 MHz, 500 W",
+""
+]
+]

@@ -1,0 +1,451 @@
+{
+ "Capacitor_SMD:C_2220_5750Metric": {
+  "pads": [
+   {
+    "num": "1",
+    "x": -2.55,
+    "y": 0.0,
+    "w": 1.7999999999999998,
+    "h": 5.3999999999999995,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "2",
+    "x": 2.55,
+    "y": 0.0,
+    "w": 1.7999999999999998,
+    "h": 5.3999999999999995,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   }
+  ],
+  "courtyard": [
+   -3.7249999999999996,
+   -2.9749999999999996,
+   3.7249999999999996,
+   2.9749999999999996
+  ],
+  "cutouts": []
+ },
+ "MountingHole:MountingHole_3.2mm_M3_Pad": {
+  "pads": [
+   {
+    "num": "1",
+    "x": 0.0,
+    "y": 0.0,
+    "w": 6.3999999999999995,
+    "h": 6.3999999999999995,
+    "rot": 0.0,
+    "shape": "circle",
+    "tht": true,
+    "npth": false,
+    "drill": 3.1999999999999997,
+    "top": true,
+    "bottom": true
+   }
+  ],
+  "courtyard": [
+   -3.4749999999999996,
+   -3.4749999999999996,
+   3.4749999999999996,
+   3.4749999999999996
+  ],
+  "cutouts": []
+ },
+ "SENTINEL:N_EdgeLaunch": {
+  "pads": [
+   {
+    "num": "1",
+    "x": 0.0,
+    "y": 0.0,
+    "w": 6.0,
+    "h": 1.5999999999999999,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "2",
+    "x": 0.0,
+    "y": -5.5,
+    "w": 6.0,
+    "h": 5.0,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "2",
+    "x": 0.0,
+    "y": 5.5,
+    "w": 6.0,
+    "h": 5.0,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "2",
+    "x": 0.0,
+    "y": -5.5,
+    "w": 6.0,
+    "h": 5.0,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": false,
+    "bottom": true
+   },
+   {
+    "num": "2",
+    "x": 0.0,
+    "y": 5.5,
+    "w": 6.0,
+    "h": 5.0,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": false,
+    "bottom": true
+   }
+  ],
+  "courtyard": [
+   -3.425,
+   -8.424999999999999,
+   8.424999999999999,
+   8.424999999999999
+  ],
+  "cutouts": []
+ },
+ "SENTINEL:DipoleArm_M4_Pair": {
+  "pads": [
+   {
+    "num": "1",
+    "x": -5.0,
+    "y": 0.0,
+    "w": 7.0,
+    "h": 7.0,
+    "rot": 0.0,
+    "shape": "circle",
+    "tht": true,
+    "npth": false,
+    "drill": 4.3,
+    "top": true,
+    "bottom": true
+   },
+   {
+    "num": "2",
+    "x": 5.0,
+    "y": 0.0,
+    "w": 7.0,
+    "h": 7.0,
+    "rot": 0.0,
+    "shape": "circle",
+    "tht": true,
+    "npth": false,
+    "drill": 4.3,
+    "top": true,
+    "bottom": true
+   }
+  ],
+  "courtyard": [
+   -9.025,
+   -4.0249999999999995,
+   9.025,
+   4.0249999999999995
+  ],
+  "cutouts": []
+ },
+ "Inductor_SMD:L_1210_3225Metric": {
+  "pads": [
+   {
+    "num": "1",
+    "x": -1.4,
+    "y": 0.0,
+    "w": 1.25,
+    "h": 2.65,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "2",
+    "x": 1.4,
+    "y": 0.0,
+    "w": 1.25,
+    "h": 2.65,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   }
+  ],
+  "courtyard": [
+   -2.3049999999999997,
+   -1.605,
+   2.3049999999999997,
+   1.605
+  ],
+  "cutouts": []
+ },
+ "Inductor_SMD:L_0805_2012Metric": {
+  "pads": [
+   {
+    "num": "1",
+    "x": -1.0625,
+    "y": 0.0,
+    "w": 0.875,
+    "h": 1.2,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "2",
+    "x": 1.0625,
+    "y": 0.0,
+    "w": 0.875,
+    "h": 1.2,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   }
+  ],
+  "courtyard": [
+   -1.775,
+   -0.875,
+   1.775,
+   0.875
+  ],
+  "cutouts": []
+ },
+ "SENTINEL:Termination_100W_SMD": {
+  "pads": [
+   {
+    "num": "1",
+    "x": -5.0,
+    "y": 0.0,
+    "w": 3.0,
+    "h": 3.0,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "2",
+    "x": 2.0,
+    "y": 0.0,
+    "w": 8.0,
+    "h": 7.0,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   }
+  ],
+  "courtyard": [
+   -7.0249999999999995,
+   -4.5249999999999995,
+   7.0249999999999995,
+   4.5249999999999995
+  ],
+  "cutouts": []
+ },
+ "SENTINEL:Balun_SMD_10x8": {
+  "pads": [
+   {
+    "num": "1",
+    "x": -4.0,
+    "y": -2.0,
+    "w": 2.0,
+    "h": 2.0,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "2",
+    "x": -4.0,
+    "y": 2.0,
+    "w": 2.0,
+    "h": 2.0,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "3",
+    "x": 4.0,
+    "y": -2.0,
+    "w": 2.0,
+    "h": 2.0,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "4",
+    "x": 4.0,
+    "y": 2.0,
+    "w": 2.0,
+    "h": 2.0,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   }
+  ],
+  "courtyard": [
+   -5.5249999999999995,
+   -4.5249999999999995,
+   5.5249999999999995,
+   4.5249999999999995
+  ],
+  "cutouts": []
+ },
+ "SENTINEL:Hybrid90_SMD_15x10": {
+  "pads": [
+   {
+    "num": "1",
+    "x": -6.5,
+    "y": -2.5,
+    "w": 2.0,
+    "h": 1.5,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "2",
+    "x": -6.5,
+    "y": 2.5,
+    "w": 2.0,
+    "h": 1.5,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "3",
+    "x": 6.5,
+    "y": -2.5,
+    "w": 2.0,
+    "h": 1.5,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "4",
+    "x": 6.5,
+    "y": 2.5,
+    "w": 2.0,
+    "h": 1.5,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   },
+   {
+    "num": "5",
+    "x": 0.0,
+    "y": 0.0,
+    "w": 9.0,
+    "h": 6.0,
+    "rot": 0.0,
+    "shape": "rect",
+    "tht": false,
+    "npth": false,
+    "drill": 0.0,
+    "top": true,
+    "bottom": false
+   }
+  ],
+  "courtyard": [
+   -8.025,
+   -5.5249999999999995,
+   8.025,
+   5.5249999999999995
+  ],
+  "cutouts": []
+ }
+}

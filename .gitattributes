@@ -1,0 +1,7 @@
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.blend binary
+*.pdf binary
+*.gbr binary
+*.drl binary

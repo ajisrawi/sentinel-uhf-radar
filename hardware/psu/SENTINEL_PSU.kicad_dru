@@ -1,0 +1,7 @@
+(version 1)
+(rule "380 V rails"
+  (condition "A.NetClass == 'HV380' && A.Net != B.Net")
+  (constraint clearance (min 2.5mm)))
+(rule "isolation barrier"
+  (condition "A.NetClass == 'PRI' && B.NetClass != 'PRI' && B.NetClass != 'HV380'")
+  (constraint clearance (min 2.5mm)))

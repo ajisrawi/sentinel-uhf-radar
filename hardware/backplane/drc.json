@@ -1,0 +1,174 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-18T22:33:24",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error"
+    ],
+    "kicad_version": "10.0.3",
+    "schematic_parity": [],
+    "source": "SENTINEL_BACKPLANE.kicad_pcb",
+    "unconnected_items": [
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "PTH pad 5 [RS485_A1] of J1",
+                    "pos": {
+                        "x": 16.0,
+                        "y": 17.08
+                    },
+                    "uuid": "2228821d-298b-4c98-a698-77aae51dbd69"
+                },
+                {
+                    "description": "PTH pad 1 [RS485_A1] of J9",
+                    "pos": {
+                        "x": 124.0,
+                        "y": 100.0
+                    },
+                    "uuid": "6583f94e-8dc8-48cd-a576-ba15eb264910"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "PTH pad 7 [RS485_B1] of J1",
+                    "pos": {
+                        "x": 16.0,
+                        "y": 19.62
+                    },
+                    "uuid": "adbd63dd-05f6-48b1-a666-3708de020567"
+                },
+                {
+                    "description": "PTH pad 3 [RS485_B1] of J9",
+                    "pos": {
+                        "x": 126.54,
+                        "y": 100.0
+                    },
+                    "uuid": "12c58818-958f-451e-b7fb-bd1036799e5f"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "PTH pad 5 [RS485_A2] of J2",
+                    "pos": {
+                        "x": 44.5,
+                        "y": 17.08
+                    },
+                    "uuid": "a3a6d6ac-357c-4026-82b3-bf71ffc5d4f7"
+                },
+                {
+                    "description": "PTH pad 5 [RS485_A2] of J9",
+                    "pos": {
+                        "x": 129.08,
+                        "y": 100.0
+                    },
+                    "uuid": "495606fd-856b-472e-86f6-d87d50790000"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "PTH pad 7 [RS485_B2] of J2",
+                    "pos": {
+                        "x": 44.5,
+                        "y": 19.62
+                    },
+                    "uuid": "e3aeb4e3-b333-4658-920a-3154a85ed9b0"
+                },
+                {
+                    "description": "PTH pad 7 [RS485_B2] of J9",
+                    "pos": {
+                        "x": 131.62,
+                        "y": 100.0
+                    },
+                    "uuid": "239f6be1-3275-4a11-85e6-90d4f4a3a5c9"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "PTH pad 5 [RS485_A3] of J3",
+                    "pos": {
+                        "x": 73.0,
+                        "y": 17.08
+                    },
+                    "uuid": "3a2c31f3-8978-44fa-a2e0-c6e623e85bf2"
+                },
+                {
+                    "description": "PTH pad 9 [RS485_A3] of J9",
+                    "pos": {
+                        "x": 134.16,
+                        "y": 100.0
+                    },
+                    "uuid": "94e9d580-c4f0-4284-9419-9b4ec68d6019"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "PTH pad 7 [RS485_B3] of J3",
+                    "pos": {
+                        "x": 73.0,
+                        "y": 19.62
+                    },
+                    "uuid": "5ddcb154-1f64-45f9-b480-1042da289fd9"
+                },
+                {
+                    "description": "PTH pad 11 [RS485_B3] of J9",
+                    "pos": {
+                        "x": 136.7,
+                        "y": 100.0
+                    },
+                    "uuid": "487bbe9e-5761-48dd-b873-48fefcd14a10"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        }
+    ],
+    "violations": []
+}

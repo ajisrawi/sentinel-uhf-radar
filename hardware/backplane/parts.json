@@ -1,0 +1,401 @@
+[
+[
+"C1",
+"330u 63V",
+"Capacitor_SMD:CP_Elec_10x10.5",
+"Bus reservoir",
+""
+],
+[
+"C2",
+"330u 63V",
+"Capacitor_SMD:CP_Elec_10x10.5",
+"Bus reservoir",
+""
+],
+[
+"C3",
+"330u 63V",
+"Capacitor_SMD:CP_Elec_10x10.5",
+"Bus reservoir",
+""
+],
+[
+"C4",
+"330u 63V",
+"Capacitor_SMD:CP_Elec_10x10.5",
+"Bus reservoir",
+""
+],
+[
+"C5",
+"4.7u 100V",
+"Capacitor_SMD:C_1210_3225Metric",
+"",
+""
+],
+[
+"C6",
+"4.7u 100V",
+"Capacitor_SMD:C_1210_3225Metric",
+"",
+""
+],
+[
+"C7",
+"4.7u 100V",
+"Capacitor_SMD:C_1210_3225Metric",
+"",
+""
+],
+[
+"C8",
+"4.7u 100V",
+"Capacitor_SMD:C_1210_3225Metric",
+"",
+""
+],
+[
+"D1",
+"SMBJ58A",
+"Diode_SMD:D_SMB",
+"",
+""
+],
+[
+"D2",
+"SMBJ15A",
+"Diode_SMD:D_SMB",
+"",
+""
+],
+[
+"F1",
+"15A",
+"SENTINEL:Fuse_456_SMD",
+"15 A fast fuse, per-slot drain protection",
+""
+],
+[
+"F11",
+"0.5A",
+"Fuse:Fuse_1812_4532Metric",
+"Resettable fuse, module aux power",
+""
+],
+[
+"F12",
+"0.5A",
+"Fuse:Fuse_1812_4532Metric",
+"Resettable fuse, module aux power",
+""
+],
+[
+"F13",
+"0.5A",
+"Fuse:Fuse_1812_4532Metric",
+"Resettable fuse, module aux power",
+""
+],
+[
+"F14",
+"0.5A",
+"Fuse:Fuse_1812_4532Metric",
+"Resettable fuse, module aux power",
+""
+],
+[
+"F15",
+"0.5A",
+"Fuse:Fuse_1812_4532Metric",
+"Resettable fuse, module aux power",
+""
+],
+[
+"F16",
+"0.5A",
+"Fuse:Fuse_1812_4532Metric",
+"Resettable fuse, module aux power",
+""
+],
+[
+"F17",
+"0.5A",
+"Fuse:Fuse_1812_4532Metric",
+"Resettable fuse, module aux power",
+""
+],
+[
+"F18",
+"0.5A",
+"Fuse:Fuse_1812_4532Metric",
+"Resettable fuse, module aux power",
+""
+],
+[
+"F2",
+"15A",
+"SENTINEL:Fuse_456_SMD",
+"15 A fast fuse, per-slot drain protection",
+""
+],
+[
+"F3",
+"15A",
+"SENTINEL:Fuse_456_SMD",
+"15 A fast fuse, per-slot drain protection",
+""
+],
+[
+"F4",
+"15A",
+"SENTINEL:Fuse_456_SMD",
+"15 A fast fuse, per-slot drain protection",
+""
+],
+[
+"F5",
+"15A",
+"SENTINEL:Fuse_456_SMD",
+"15 A fast fuse, per-slot drain protection",
+""
+],
+[
+"F6",
+"15A",
+"SENTINEL:Fuse_456_SMD",
+"15 A fast fuse, per-slot drain protection",
+""
+],
+[
+"F7",
+"15A",
+"SENTINEL:Fuse_456_SMD",
+"15 A fast fuse, per-slot drain protection",
+""
+],
+[
+"F8",
+"15A",
+"SENTINEL:Fuse_456_SMD",
+"15 A fast fuse, per-slot drain protection",
+""
+],
+[
+"H1",
+"M4",
+"MountingHole:MountingHole_3.2mm_M3_Pad",
+"",
+""
+],
+[
+"H2",
+"M4",
+"MountingHole:MountingHole_3.2mm_M3_Pad",
+"",
+""
+],
+[
+"H3",
+"M4",
+"MountingHole:MountingHole_3.2mm_M3_Pad",
+"",
+""
+],
+[
+"H4",
+"M4",
+"MountingHole:MountingHole_3.2mm_M3_Pad",
+"",
+""
+],
+[
+"J1",
+"SLOT1",
+"Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical",
+"T/R module 1 control header (mates module J5)",
+""
+],
+[
+"J10",
+"50V IN",
+"Connector_Molex:Molex_Mini-Fit_Jr_5566-04A_2x02_P4.20mm_Vertical",
+"50 V from subarray supply, 40 A pk",
+""
+],
+[
+"J11",
+"DRAIN1",
+"Connector_Molex:Molex_Mini-Fit_Jr_5566-02A_2x01_P4.20mm_Vertical",
+"Module 1 50 V drain feed",
+""
+],
+[
+"J12",
+"DRAIN2",
+"Connector_Molex:Molex_Mini-Fit_Jr_5566-02A_2x01_P4.20mm_Vertical",
+"Module 2 50 V drain feed",
+""
+],
+[
+"J13",
+"DRAIN3",
+"Connector_Molex:Molex_Mini-Fit_Jr_5566-02A_2x01_P4.20mm_Vertical",
+"Module 3 50 V drain feed",
+""
+],
+[
+"J14",
+"DRAIN4",
+"Connector_Molex:Molex_Mini-Fit_Jr_5566-02A_2x01_P4.20mm_Vertical",
+"Module 4 50 V drain feed",
+""
+],
+[
+"J15",
+"DRAIN5",
+"Connector_Molex:Molex_Mini-Fit_Jr_5566-02A_2x01_P4.20mm_Vertical",
+"Module 5 50 V drain feed",
+""
+],
+[
+"J16",
+"DRAIN6",
+"Connector_Molex:Molex_Mini-Fit_Jr_5566-02A_2x01_P4.20mm_Vertical",
+"Module 6 50 V drain feed",
+""
+],
+[
+"J17",
+"DRAIN7",
+"Connector_Molex:Molex_Mini-Fit_Jr_5566-02A_2x01_P4.20mm_Vertical",
+"Module 7 50 V drain feed",
+""
+],
+[
+"J18",
+"DRAIN8",
+"Connector_Molex:Molex_Mini-Fit_Jr_5566-02A_2x01_P4.20mm_Vertical",
+"Module 8 50 V drain feed",
+""
+],
+[
+"J19",
+"12V IN",
+"Connector_Molex:Molex_Mini-Fit_Jr_5566-02A_2x01_P4.20mm_Vertical",
+"12 V aux from subarray supply",
+""
+],
+[
+"J2",
+"SLOT2",
+"Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical",
+"T/R module 2 control header (mates module J5)",
+""
+],
+[
+"J3",
+"SLOT3",
+"Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical",
+"T/R module 3 control header (mates module J5)",
+""
+],
+[
+"J4",
+"SLOT4",
+"Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical",
+"T/R module 4 control header (mates module J5)",
+""
+],
+[
+"J5",
+"SLOT5",
+"Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical",
+"T/R module 5 control header (mates module J5)",
+""
+],
+[
+"J6",
+"SLOT6",
+"Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical",
+"T/R module 6 control header (mates module J5)",
+""
+],
+[
+"J7",
+"SLOT7",
+"Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical",
+"T/R module 7 control header (mates module J5)",
+""
+],
+[
+"J8",
+"SLOT8",
+"Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical",
+"T/R module 8 control header (mates module J5)",
+""
+],
+[
+"J9",
+"TO TILE",
+"Connector_PinHeader_2.54mm:PinHeader_2x20_P2.54mm_Vertical",
+"To RFSoC tile: 8 x (RS-485 A/B, TX_EN, FAULT_N)",
+""
+],
+[
+"R1",
+"33",
+"Resistor_SMD:R_0603_1608Metric",
+"TX_EN source termination",
+""
+],
+[
+"R2",
+"33",
+"Resistor_SMD:R_0603_1608Metric",
+"TX_EN source termination",
+""
+],
+[
+"R3",
+"33",
+"Resistor_SMD:R_0603_1608Metric",
+"TX_EN source termination",
+""
+],
+[
+"R4",
+"33",
+"Resistor_SMD:R_0603_1608Metric",
+"TX_EN source termination",
+""
+],
+[
+"R5",
+"33",
+"Resistor_SMD:R_0603_1608Metric",
+"TX_EN source termination",
+""
+],
+[
+"R6",
+"33",
+"Resistor_SMD:R_0603_1608Metric",
+"TX_EN source termination",
+""
+],
+[
+"R7",
+"33",
+"Resistor_SMD:R_0603_1608Metric",
+"TX_EN source termination",
+""
+],
+[
+"R8",
+"33",
+"Resistor_SMD:R_0603_1608Metric",
+"TX_EN source termination",
+""
+]
+]
