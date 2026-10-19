@@ -19672,7 +19672,7 @@
 		)
 		(uuid "8094b6ea-b6e0-59f1-ad71-3ddf1431ae32")
 	)
-	(label "TX_EN_T1"
+	(label "RS485_A5"
 		(at 441.96 358.14 0)
 		(fields_autoplaced yes)
 		(effects
@@ -19681,7 +19681,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "3d3510b6-56b6-585a-a3eb-66c3b500d3fc")
+		(uuid "da67d6eb-60cd-5917-926f-8e8777689ca3")
 	)
 	(label "RS485_B1"
 		(at 424.18 360.68 180)
@@ -19694,7 +19694,7 @@
 		)
 		(uuid "7d702a49-c302-53bd-95d6-13eb002906c3")
 	)
-	(label "FAULT_N1"
+	(label "RS485_B5"
 		(at 441.96 360.68 0)
 		(fields_autoplaced yes)
 		(effects
@@ -19703,9 +19703,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "489ef055-cbbd-5807-b5f9-0d31d8a08bbe")
+		(uuid "5e3f6fbd-837f-5daf-be9e-ef09afabe137")
 	)
-	(label "RS485_A2"
+	(label "TX_EN_T1"
 		(at 424.18 363.22 180)
 		(fields_autoplaced yes)
 		(effects
@@ -19714,9 +19714,9 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "8d48661b-8491-59b8-96b3-88eb0fb00b8c")
+		(uuid "191f5557-8ac8-5d24-81f0-d2050b0a9481")
 	)
-	(label "TX_EN_T2"
+	(label "TX_EN_T5"
 		(at 441.96 363.22 0)
 		(fields_autoplaced yes)
 		(effects
@@ -19725,9 +19725,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "cffa86a3-c330-52f2-9bb0-062549015cf5")
+		(uuid "e024c025-733c-5fc9-ac6f-e74d88bc1a12")
 	)
-	(label "RS485_B2"
+	(label "FAULT_N1"
 		(at 424.18 365.76 180)
 		(fields_autoplaced yes)
 		(effects
@@ -19736,9 +19736,9 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "02fe1b0e-c5b1-53ce-8de8-d3b5b6dc4c2c")
+		(uuid "f3f079b9-175e-5b55-a48f-55344cb08d6d")
 	)
-	(label "FAULT_N2"
+	(label "FAULT_N5"
 		(at 441.96 365.76 0)
 		(fields_autoplaced yes)
 		(effects
@@ -19747,9 +19747,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "4c96f8ed-f609-5a9b-9487-e531f90cd49b")
+		(uuid "5036042b-94aa-5be8-9944-c85d555d9f8b")
 	)
-	(label "RS485_A3"
+	(label "RS485_A2"
 		(at 424.18 368.3 180)
 		(fields_autoplaced yes)
 		(effects
@@ -19758,9 +19758,9 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "a0990272-0ddc-5336-9966-5e4aa9674e4f")
+		(uuid "05da3a6e-b8e7-54c9-822a-843408dced03")
 	)
-	(label "TX_EN_T3"
+	(label "RS485_A6"
 		(at 441.96 368.3 0)
 		(fields_autoplaced yes)
 		(effects
@@ -19769,9 +19769,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "2f50374c-9c29-5f6e-ac4b-ba35eb11e0e6")
+		(uuid "e6962f96-c9e6-5a94-821d-2be46a2213f8")
 	)
-	(label "RS485_B3"
+	(label "RS485_B2"
 		(at 424.18 370.84 180)
 		(fields_autoplaced yes)
 		(effects
@@ -19780,9 +19780,9 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "eab7cafa-4a52-588d-89d8-2c702268cc3e")
+		(uuid "24fc5eb7-2fd9-552e-86e1-389c7c77a01b")
 	)
-	(label "FAULT_N3"
+	(label "RS485_B6"
 		(at 441.96 370.84 0)
 		(fields_autoplaced yes)
 		(effects
@@ -19791,9 +19791,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "cfb24239-da55-514c-af53-cb9ede3a8784")
+		(uuid "b4d1679c-7744-5ae6-94ae-4a81a7c0f490")
 	)
-	(label "RS485_A4"
+	(label "TX_EN_T2"
 		(at 424.18 373.38 180)
 		(fields_autoplaced yes)
 		(effects
@@ -19802,9 +19802,9 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "4d2fb640-f6db-5cbc-ad57-48211f92811d")
+		(uuid "f2973989-4672-51b1-b666-6617b86d982b")
 	)
-	(label "TX_EN_T4"
+	(label "TX_EN_T6"
 		(at 441.96 373.38 0)
 		(fields_autoplaced yes)
 		(effects
@@ -19813,9 +19813,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "66a6f6a7-a752-5c1b-bfd0-ab8ffefdf0b4")
+		(uuid "a1cb25fd-cc40-51f4-a751-8e5fbb7886ee")
 	)
-	(label "RS485_B4"
+	(label "FAULT_N2"
 		(at 424.18 375.92 180)
 		(fields_autoplaced yes)
 		(effects
@@ -19824,9 +19824,9 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "9453cfca-40b4-5516-b908-43ed32c61c8b")
+		(uuid "98117e94-8c10-50e2-a893-058d9819e370")
 	)
-	(label "FAULT_N4"
+	(label "FAULT_N6"
 		(at 441.96 375.92 0)
 		(fields_autoplaced yes)
 		(effects
@@ -19835,9 +19835,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "5b3a670f-e1a2-5c72-9bb2-5618a7816002")
+		(uuid "7905c316-7339-5d17-b226-f8d1e777aaea")
 	)
-	(label "RS485_A5"
+	(label "RS485_A3"
 		(at 424.18 378.46 180)
 		(fields_autoplaced yes)
 		(effects
@@ -19846,9 +19846,9 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "e94c8668-af61-560a-88d6-7e1f7d0c7c86")
+		(uuid "0c34026a-a795-54f8-b4e2-f642c853195f")
 	)
-	(label "TX_EN_T5"
+	(label "RS485_A7"
 		(at 441.96 378.46 0)
 		(fields_autoplaced yes)
 		(effects
@@ -19857,9 +19857,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "6f28c2c5-96ab-50f8-b616-d50cff024fe2")
+		(uuid "b6bf5ecc-8c82-5ca0-a893-25883d8c159b")
 	)
-	(label "RS485_B5"
+	(label "RS485_B3"
 		(at 424.18 381 180)
 		(fields_autoplaced yes)
 		(effects
@@ -19868,9 +19868,9 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "24784165-e27a-5cc2-81ac-65588c4e5129")
+		(uuid "362834ab-b5ff-5f6a-9540-401b0d0daac6")
 	)
-	(label "FAULT_N5"
+	(label "RS485_B7"
 		(at 441.96 381 0)
 		(fields_autoplaced yes)
 		(effects
@@ -19879,9 +19879,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "5f4b001b-f556-5aa9-b848-3957218726a8")
+		(uuid "cf1d4edb-0da7-56e3-855d-71850eb24c77")
 	)
-	(label "RS485_A6"
+	(label "TX_EN_T3"
 		(at 424.18 383.54 180)
 		(fields_autoplaced yes)
 		(effects
@@ -19890,9 +19890,9 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "487dd53c-0791-5de2-a4af-1b1f8cd99363")
+		(uuid "002e8c5b-8cd8-58d2-8c9c-5b43f6b1310f")
 	)
-	(label "TX_EN_T6"
+	(label "TX_EN_T7"
 		(at 441.96 383.54 0)
 		(fields_autoplaced yes)
 		(effects
@@ -19901,9 +19901,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "c99eb107-6c0a-5a7a-8209-d8570655863a")
+		(uuid "e3af280d-564f-5822-9f21-e260960b0beb")
 	)
-	(label "RS485_B6"
+	(label "FAULT_N3"
 		(at 424.18 386.08 180)
 		(fields_autoplaced yes)
 		(effects
@@ -19912,9 +19912,9 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "08891196-2397-562f-90df-08474423208c")
+		(uuid "a1fc01d3-9713-5923-b359-27f26c978de0")
 	)
-	(label "FAULT_N6"
+	(label "FAULT_N7"
 		(at 441.96 386.08 0)
 		(fields_autoplaced yes)
 		(effects
@@ -19923,9 +19923,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "c7f068c9-2a58-5d5a-bfad-f82b773ac3b4")
+		(uuid "fdf166b6-ba72-5f70-9fb8-eb25e103fccd")
 	)
-	(label "RS485_A7"
+	(label "RS485_A4"
 		(at 424.18 388.62 180)
 		(fields_autoplaced yes)
 		(effects
@@ -19934,9 +19934,9 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "9dcd382a-aca2-5d63-85e1-87fef982e24a")
+		(uuid "c7c333ff-903a-54e5-9c55-76be8e57d85e")
 	)
-	(label "TX_EN_T7"
+	(label "RS485_A8"
 		(at 441.96 388.62 0)
 		(fields_autoplaced yes)
 		(effects
@@ -19945,9 +19945,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "1d1be40f-ff7a-5099-9ec7-974beebd7abd")
+		(uuid "3954f07e-119d-58e9-9854-5133922a23de")
 	)
-	(label "RS485_B7"
+	(label "RS485_B4"
 		(at 424.18 391.16 180)
 		(fields_autoplaced yes)
 		(effects
@@ -19956,9 +19956,9 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "6475ea51-a5be-59e7-8d9e-72e5046cd2ee")
+		(uuid "1b122537-01e4-575a-952f-a83882ea8a67")
 	)
-	(label "FAULT_N7"
+	(label "RS485_B8"
 		(at 441.96 391.16 0)
 		(fields_autoplaced yes)
 		(effects
@@ -19967,9 +19967,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "ea2d3a77-481f-5050-a73c-95885ea21244")
+		(uuid "8580ca5c-276d-5d23-9a80-cd148a784b3b")
 	)
-	(label "RS485_A8"
+	(label "TX_EN_T4"
 		(at 424.18 393.7 180)
 		(fields_autoplaced yes)
 		(effects
@@ -19978,7 +19978,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "686cae21-7bf0-5f88-a90c-73b0cde5b86d")
+		(uuid "95c5be11-aa77-5412-9eb7-56260719bb3b")
 	)
 	(label "TX_EN_T8"
 		(at 441.96 393.7 0)
@@ -19991,7 +19991,7 @@
 		)
 		(uuid "9d904e64-0159-5788-8aa3-a8ee4c9a54cc")
 	)
-	(label "RS485_B8"
+	(label "FAULT_N4"
 		(at 424.18 396.24 180)
 		(fields_autoplaced yes)
 		(effects
@@ -20000,7 +20000,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "965d8390-6ed8-5f60-a363-8b3b680051c3")
+		(uuid "dc2b0ac4-75e8-5fb8-9c32-cdc7f9a26e02")
 	)
 	(label "FAULT_N8"
 		(at 441.96 396.24 0)

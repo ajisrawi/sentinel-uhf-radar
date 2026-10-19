@@ -155,8 +155,9 @@ def build():
                  "6": f"RS485_A{s}", "7": f"RS485_B{s}", "8": "+3V3"}, Description=f"RS-485 to T/R module {s}")
         sch.add(f"C{s}", "Device:C", "100n", C0603, x + 20.32, y, 0, {"1": "+3V3", "2": "GND"})
         n = s - 1
-        bp.update({str(4 * n + 1): f"RS485_A{s}", str(4 * n + 3): f"RS485_B{s}",
-                   str(4 * n + 2): f"TX_EN_T{s}", str(4 * n + 4): f"FAULT_N{s}"})
+        base = 2 * (4 * (n % 4)) + (1 if s <= 4 else 2)   # left column slots 1-4, right column 5-8
+        bp.update({str(base): f"RS485_A{s}", str(base + 2): f"RS485_B{s}",
+                    str(base + 4): f"TX_EN_T{s}", str(base + 6): f"FAULT_N{s}"})
     bp.update({str(k): "GND" for k in range(33, 41)})
     sch.add("J3", "Connector_Generic:Conn_02x20_Odd_Even", "BACKPLANE", "Connector_PinHeader_2.54mm:PinHeader_2x20_P2.54mm_Vertical",
             431.8, 381.0, 0, bp, Description="Cable to tile backplane J9 (pin-for-pin)")

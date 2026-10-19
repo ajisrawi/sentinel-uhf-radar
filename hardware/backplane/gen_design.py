@@ -50,8 +50,9 @@ def build():
                 {"1": "+12V", "2": f"+12V_S{s}"}, Description="Resettable fuse, module aux power")
         sch.add(f"R{s}", "Device:R", "33", R0603, x + 5.08, 152.4, 0,
                 {"1": f"TX_EN_T{s}", "2": f"TX_EN{s}"}, Description="TX_EN source termination")
-        tile.update({str(4 * n + 1): f"RS485_A{s}", str(4 * n + 3): f"RS485_B{s}",
-                     str(4 * n + 2): f"TX_EN_T{s}", str(4 * n + 4): f"FAULT_N{s}"})
+        base = 2 * (4 * (n % 4)) + (1 if s <= 4 else 2)   # left column slots 1-4, right column 5-8
+        tile.update({str(base): f"RS485_A{s}", str(base + 2): f"RS485_B{s}",
+                    str(base + 4): f"TX_EN_T{s}", str(base + 6): f"FAULT_N{s}"})
     tile.update({str(k): "GND" for k in range(33, 41)})
     sch.add("J9", "Connector_Generic:Conn_02x20_Odd_Even", "TO TILE", HDR2x20, 279.4, 215.9, 0, tile,
             Description="To RFSoC tile: 8 x (RS-485 A/B, TX_EN, FAULT_N)")

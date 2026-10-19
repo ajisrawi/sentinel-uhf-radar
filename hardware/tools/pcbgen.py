@@ -112,7 +112,9 @@ class Placed:
         """Copper pads in board coordinates: dicts with num, net, shape geometry per layer."""
         out = []
         for p in self.g["pads"]:
-            if not (p["top"] or p["bottom"] or p["tht"]) or p["num"] == "":
+            if p.get("npth"):
+                pass                          # unplated hole: an obstacle for every net
+            elif not (p["top"] or p["bottom"] or p["tht"]) or p["num"] == "":
                 continue
             cx, cy = xf(self.x, self.y, self.rot, p["x"], p["y"])
             ang = p["rot"] + self.rot
@@ -523,6 +525,9 @@ def fanout(idx, ko):
             ox, oy = pcx - cx0, pcy - cy0
             base = math.atan2(oy, ox) if abs(ox) + abs(oy) > 1e-3 else 0.0
             minx, miny, maxx, maxy = g.bounds
+            pw, ph = maxx - minx, maxy - miny
+            if max(pw, ph) > 1.6 * min(pw, ph):    # elongated pad: escape along its long axis, away from the body
+                base = (0.0 if ox >= 0 else math.pi) if pw > ph else (math.pi / 2 if oy >= 0 else -math.pi / 2)
             r0 = max(maxx - minx, maxy - miny) / 2
             done = False
             for vclr, dist in [(c, d) for c in (0.5, RCLR, CLR + 0.01) for d in np.arange(r0 + vd / 2 + 0.3, r0 + 8.0, 0.25)]:
@@ -556,7 +561,7 @@ def fanout(idx, ko):
                     BRD.track(F, (pcx, pcy), (tgt.x, tgt.y), 0.2, net)
                     idx.add(F, LineString([(pcx, pcy), (tgt.x, tgt.y)]).buffer(0.1), net)
                 elif net not in ZONE_NETS:
-                    BRD.terminals[net].append((pcx, pcy, (F,)))
+                    BRD.terminals[net].append((pcx, pcy, (F,), g))
                 else:
                     # boxed-in ground pin: via under the package body, between the pin rows
                     v = Point(cx0, cy0).buffer(VIA_D / 2, 12)
@@ -637,18 +642,15 @@ class Router:
         def cells_of(t):
             x, y = t[0], t[1]
             ix, iy = int(round(x / CELL)), int(round(y / CELL))
-            cs = set()
-            for ly in t[2]:
-                if ly in L:
-                    li = L.index(ly)
-                    cs.add((li, ix, iy))
-            if len(t) > 3:   # THT pad: every cell inside the pad
+            lis = [L.index(ly) for ly in t[2] if ly in L]
+            cs = {(li, ix, iy) for li in lis}
+            if len(t) > 3:   # pad terminal: every cell inside the pad (shrunk so the track stays on it)
+                inner = t[3].buffer(-w / 2) if t[3].buffer(-w / 2).area > 0 else t[3]
                 minx, miny, maxx, maxy = t[3].bounds
                 for jx in range(int(minx / CELL), int(maxx / CELL) + 2):
                     for jy in range(int(miny / CELL), int(maxy / CELL) + 2):
-                        if t[3].contains(Point(jx * CELL, jy * CELL)):
-                            for li in range(len(L)):
-                                cs.add((li, jx, jy))
+                        if inner.contains(Point(jx * CELL, jy * CELL)):
+                            cs.update((li, jx, jy) for li in lis)
             return cs
 
         groups = [cells_of(t) for t in terms]
@@ -658,20 +660,25 @@ class Router:
         tree |= groups[0]
         remaining = groups[1:]
         paths = []
+        unreached = 0
         while remaining:
             targets = set().union(*remaining)
             tx = np.array([c[1] for c in targets])
             ty = np.array([c[2] for c in targets])
             path = self._astar(tree, targets, masks, via_block, L, tx, ty)
             if path is None:
-                return None
+                # nothing left is reachable from this tree: start a new island from the next
+                # group so the remaining pins still connect among themselves
+                unreached += 1
+                tree = set(remaining.pop(0))
+                continue
             paths.append(path)
             tree |= set(path)
             hit = path[-1]
             remaining = [g for g in remaining if hit not in g]
             for g in [g for g in remaining if g & tree]:
                 remaining.remove(g)
-        return paths
+        return paths, unreached
 
     def _astar(self, sources, targets, masks, via_block, L, tx, ty):
         moves = [(1, 0, 1.0), (-1, 0, 1.0), (0, 1, 1.0), (0, -1, 1.0),
@@ -777,7 +784,7 @@ def courtyard_overlaps():
     return bad
 
 
-def run(power_zones=(), stitch=True, gnd_keepout=None):
+def run(power_zones=(), stitch=True, gnd_keepout=None, first=()):
     """Fan out, route, pour and write plan.json. power_zones: [(layer, net, polygon)]."""
     missing = set(COMPS) - set(BRD.parts)
     if missing:
@@ -805,19 +812,26 @@ def run(power_zones=(), stitch=True, gnd_keepout=None):
     router = Router(blocked_zones=blocked)
     nets = {n: t for n, t in BRD.terminals.items() if len(t) > 1}
     span = {n: np.ptp([t[0] for t in nets[n]]) + np.ptp([t[1] for t in nets[n]]) for n in nets}
-    order = sorted(nets, key=lambda n: (TRACK_W[n] < 0.4, span[n]))
+    order = sorted(nets, key=lambda n: (n not in first, TRACK_W[n] < 0.4, span[n]))
     routed = {}
 
     def try_route(net):
+        if net in routed:
+            rip(net)
+        best = None
         for w in dict.fromkeys((TRACK_W[net], 0.3, 0.25)):
-            paths = router.route(net, nets[net], w)
-            if paths is not None:
-                t0, v0 = len(BRD.tracks), len(BRD.vias)
-                for p in paths:
-                    emit_path(p, net, w, router.layers_for(net))
-                routed[net] = (BRD.tracks[t0:], BRD.vias[v0:])
-                return True
-        return False
+            paths, unr = router.route(net, nets[net], w)
+            if best is None or unr < best[2]:
+                best = (w, paths, unr)
+            if unr == 0:
+                break
+        w, paths, unr = best
+        if paths:
+            t0, v0 = len(BRD.tracks), len(BRD.vias)
+            for p in paths:
+                emit_path(p, net, w, router.layers_for(net))
+            routed[net] = (BRD.tracks[t0:], BRD.vias[v0:])
+        return unr == 0
 
     def rip(net):
         trk, via = routed.pop(net)
@@ -831,7 +845,7 @@ def run(power_zones=(), stitch=True, gnd_keepout=None):
         print(f"  [{i + 1}/{len(order)}] {net}: {'ok' if ok else 'FAILED'}", flush=True)
         if not ok:
             failed.append(net)
-    for rnd in range(6):
+    for rnd in range(8):
         if not failed:
             break
         still = []
@@ -841,7 +855,7 @@ def run(power_zones=(), stitch=True, gnd_keepout=None):
             region = box(min(xs) - 4, min(ys) - 4, max(xs) + 4, max(ys) + 4)
             victims = [n for n, (trk, _) in routed.items()
                        if any(region.intersects(LineString([a, b])) for _, a, b, _, _ in trk)]
-            victims = sorted(victims, key=lambda n: span[n])[: 4 + 2 * rnd]
+            victims = sorted(victims, key=lambda n: span[n])[: 4 + 4 * rnd]
             for v in victims:
                 rip(v)
             ok = try_route(net)

@@ -78,6 +78,8 @@ def main():
         sections.append(f"""### {b['name']}
 `hardware/{f}/` · {b['qty']} per face · {b['parts']} parts · {b['nets']} nets · {status(b)}
 
+📄 [Bill of materials (CSV)](hardware/{f}/export/{b['pro']}_BOM.csv) · [Schematic (PDF)](hardware/{f}/export/{b['pro']}_schematic.pdf) · [Gerbers](hardware/{f}/export/gerbers)
+
 {notes[f]}
 
 <p align="center">{' '.join(pics)}</p>
@@ -293,7 +295,7 @@ docs/                      logo, README figures, generators
 ```
 
 Each `hardware/<board>/` folder holds `SENTINEL_*.kicad_pro/.kicad_sch/.kicad_pcb`, its `SENTINEL.kicad_sym` /
-`SENTINEL.pretty` libraries, `export/` (schematic PDF, 3D view, gerbers + drill files) and the generators.
+`SENTINEL.pretty` libraries, `export/` (schematic PDF, grouped BOM CSV, 3D view, gerbers + drill files) and the generators.
 
 ## Reproduce everything
 
@@ -306,6 +308,7 @@ cd hardware/tr_module && python gen_footprints.py && python gen_schematic.py && 
 bash hardware/tools/sch_check.sh hardware/tr_module SENTINEL_TRM        # ERC + netlist check + footprint dump
 python hardware/tr_module/pcb_plan.py                                  # place + route (~30-60 min)
 bash hardware/tools/pcb_check.sh hardware/tr_module SENTINEL_TRM        # build board, DRC, 3D view, gerbers
+bash hardware/tools/export_bom.sh                                      # grouped BOM CSV for every board
 # same pattern for the other boards (gen_design.py, then the two check scripts)
 blender -b -P render/build_radar.py -- night 64
 python report/build_report.py && python docs/make_figures.py && python docs/make_readme.py
