@@ -36,6 +36,7 @@ def main():
     r = {a: rs.detect_range(10, theta_scan=a) * 10 ** (-2 * mismatch_db(em, a) / 40) / 1e3 for a in (0, 30, 60)}
     boards = board_rows()
     n_clean = sum(b["clean"] for b in boards)
+    routing_note = "" if n_clean == len(boards) else " The rest are still being routed and are updated as they finish."
     img = "docs/images"
 
     def status(b):
@@ -238,8 +239,7 @@ KiCad itself:
 |---|---|---|---|---|---|---|---|---|
 {table}
 
-{n_clean} of 7 layouts are DRC-clean with zero unrouted nets. The rest are still being routed and are updated as they
-finish.
+{n_clean} of 7 layouts are DRC-clean with zero unrouted nets.{routing_note}
 
 {chr(10).join(sections)}
 ## Site and building

@@ -147,7 +147,7 @@ KiCad itself:
 
 | Board | Per face | Role | Parts | Nets | ERC | Netlist | Layout | Size |
 |---|---|---|---|---|---|---|---|---|
-| **T/R module** | 2,587 | GaN PA chain, receiver, protection, bias, telemetry | 144 | 90 | 0 | ✔ | 🔄 0 err / 6 unrouted | 230 × 152 mm |
+| **T/R module** | 2,587 | GaN PA chain, receiver, protection, bias, telemetry | 144 | 90 | 0 | ✔ | ✅ DRC clean | 230 × 152 mm |
 | **Element feed board** | 2,587 | 90 deg hybrid, matching, baluns into the crossed dipoles | 19 | 11 | 0 | ✔ | ✅ DRC clean | 86 × 56 mm |
 | **RFSoC digitiser tile** | 324 | SOM carrier: 9 RX + 9 TX channels, module links, QSFP28 | 118 | 187 | 0 | ✔ | ✅ DRC clean | 320 × 260 mm |
 | **Tile backplane** | 324 | 8 module slots, fused 50 V drain bus, point-to-point control | 57 | 59 | 0 | ✔ | ✅ DRC clean | 232 × 112 mm |
@@ -155,11 +155,10 @@ KiCad itself:
 | **Calibration network** | 324 | SPDT selector tree + inject/measure switch on the module CAL ports | 37 | 25 | 0 | ✔ | ✅ DRC clean | 120 × 82 mm |
 | **Clock & timing** | 41 | PLL-cleaned 122.88 MHz, SYSREF from PPS, LVDS to 8 tiles | 63 | 82 | 0 | ✔ | ✅ DRC clean | 150 × 130 mm |
 
-6 of 7 layouts are DRC-clean with zero unrouted nets. The rest are still being routed and are updated as they
-finish.
+7 of 7 layouts are DRC-clean with zero unrouted nets.
 
 ### T/R module
-`hardware/tr_module/` · 2,587 per face · 144 parts · 90 nets · 🔄 0 err / 6 unrouted
+`hardware/tr_module/` · 2,587 per face · 144 parts · 90 nets · ✅ DRC clean
 
 📄 [Bill of materials (CSV)](hardware/tr_module/export/SENTINEL_TRM_BOM.csv) · [Schematic (PDF)](hardware/tr_module/export/SENTINEL_TRM_schematic.pdf) · [Gerbers](hardware/tr_module/export/gerbers)
 
@@ -304,7 +303,7 @@ python report/build_report.py && python docs/make_figures.py && python docs/make
 | Element + array EM model | ✅ 61 elements, 3 frequencies, full coupling (thin-wire, infinite ground) |
 | Wide-angle match | ⚠️ ~−4 dB at 60°: needs a WAIM sheet and full-wave verification |
 | All 7 schematics | ✅ 0 ERC violations, exact netlist match |
-| PCB layouts | 6/7 DRC-clean; the rest are being routed |
+| PCB layouts | 7/7 DRC-clean; the rest are being routed |
 | Differential pairs | ⚠️ data-converter, LVDS and 25 Gb/s pairs are auto-routed as single nets; need a manual coupled, length-matched pass |
 | Pin maps not in the KiCad library | ⚠️ RFSoC SOM connector, PLL and RF modules use this project's own pin maps; map to the chosen parts' datasheets |
 | T/R module matching values | ⚠️ first-pass from device models; tune on a load-pull bench |

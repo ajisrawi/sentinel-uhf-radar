@@ -89,6 +89,7 @@ def main():
     n_erc = sum(len(s["violations"]) for s in erc["sheets"])
     drc_txt, pcb_note, drc_ok = "pending", "", False
     plan = json.loads((HW / "plan.json").read_text()) if (HW / "plan.json").exists() else {}
+    trm_pcb = (HW / "SENTINEL_TRM.kicad_pcb").read_text(encoding="utf-8")
     if (HW / "drc.json").exists():
         drc = json.loads((HW / "drc.json").read_text())
         errs = [v for v in drc.get("violations", []) if v.get("severity") == "error"]
@@ -125,7 +126,8 @@ def main():
         "worstg": f"{em['worst_active_gamma_dB']:.1f} dB",
         "hw_parts": f"{len(parts)}", "hw_nets": f"{sum(1 for k in nets if True)}", "hw_erc": f"{n_erc}",
         "hw_drc": drc_txt,
-        "pcb_tv": f"{len(plan.get('tracks', [])):,} / {len(plan.get('vias', [])):,}" if plan else "—",
+        # counted from the board itself: the plan misses nets finished outside the grid router
+        "pcb_tv": f"{trm_pcb.count('(segment'):,} / {trm_pcb.count('(via'):,}",
     }
     cost = [
         ["T/R modules", "5,174 × $4–6k (GaN pair, circulator, PCB, test)", 21, 31],

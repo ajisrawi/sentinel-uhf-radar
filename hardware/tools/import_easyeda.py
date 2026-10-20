@@ -2,6 +2,8 @@
 
 usage: import_easyeda.py <board.kicad_pcb> <easyeda_routes.json>
 EasyEDA coordinates are mils with Y pointing up; KiCad is mm with Y pointing down, same origin.
+If the JSON has a "nets" list, only those nets are replaced and every other track is kept
+(used to finish a few nets on an otherwise routed board).
 """
 import json
 import sys
@@ -12,9 +14,11 @@ MIL = 0.0254
 LAYER = {1: pcbnew.F_Cu, 2: pcbnew.B_Cu, 15: pcbnew.In1_Cu, 16: pcbnew.In2_Cu}
 
 path, routes = sys.argv[1], json.load(open(sys.argv[2]))
+only = set(routes.get("nets", []))
 b = pcbnew.LoadBoard(path)
 for t in list(b.GetTracks()):
-    b.Delete(t)
+    if not only or t.GetNetname() in only:
+        b.Delete(t)
 
 
 def pt(x, y):

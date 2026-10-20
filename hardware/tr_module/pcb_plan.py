@@ -9,6 +9,12 @@ T/R module layout on the shared engine (hardware/tools/pcbgen.py): 230 x 152 mm,
 The RF chains are laid out exactly as the schematic chains: series parts along a line,
 shunt stacks hanging off each node. The 50 V input strip (connector, TVS, bulk, shunt,
 drain switch) is a placed 2.5 mm power chain.
+
+The grid router leaves five nets incomplete (+5V, DRAIN_ON, NTC_V, FAULT_N, V_REFL). They are
+finished by the EasyEDA Pro autorouter with every other track locked; DRAIN_ON needed one
+short run on In1. Those five nets are stored in easyeda_routes.json and replayed with
+    "<KiCad>/bin/python.exe" tools/import_easyeda.py tr_module/SENTINEL_TRM.kicad_pcb tr_module/easyeda_routes.json
+after building the board, followed by a DRC with --refill-zones --save-board.
 """
 import sys
 from pathlib import Path
