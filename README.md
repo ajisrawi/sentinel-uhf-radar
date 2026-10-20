@@ -149,13 +149,13 @@ KiCad itself:
 |---|---|---|---|---|---|---|---|---|
 | **T/R module** | 2,587 | GaN PA chain, receiver, protection, bias, telemetry | 144 | 90 | 0 | ✔ | 🔄 0 err / 6 unrouted | 230 × 152 mm |
 | **Element feed board** | 2,587 | 90 deg hybrid, matching, baluns into the crossed dipoles | 19 | 11 | 0 | ✔ | ✅ DRC clean | 86 × 56 mm |
-| **RFSoC digitiser tile** | 324 | SOM carrier: 9 RX + 9 TX channels, module links, QSFP28 | 118 | 187 | 0 | ✔ | 🔄 24 err / 44 unrouted | 240 × 190 mm |
+| **RFSoC digitiser tile** | 324 | SOM carrier: 9 RX + 9 TX channels, module links, QSFP28 | 118 | 187 | 0 | ✔ | ✅ DRC clean | 320 × 260 mm |
 | **Tile backplane** | 324 | 8 module slots, fused 50 V drain bus, point-to-point control | 57 | 59 | 0 | ✔ | ✅ DRC clean | 232 × 112 mm |
 | **Subarray power supply** | 324 | 380 V -> 50 V, two 600 W bricks, supervisor, 2.5 mm HV rules | 56 | 38 | 0 | ✔ | ✅ DRC clean | 300 × 185 mm |
 | **Calibration network** | 324 | SPDT selector tree + inject/measure switch on the module CAL ports | 37 | 25 | 0 | ✔ | ✅ DRC clean | 120 × 82 mm |
 | **Clock & timing** | 41 | PLL-cleaned 122.88 MHz, SYSREF from PPS, LVDS to 8 tiles | 63 | 82 | 0 | ✔ | ✅ DRC clean | 150 × 130 mm |
 
-5 of 7 layouts are DRC-clean with zero unrouted nets. The rest are still being routed and are updated as they
+6 of 7 layouts are DRC-clean with zero unrouted nets. The rest are still being routed and are updated as they
 finish.
 
 ### T/R module
@@ -177,11 +177,11 @@ GaN driver + 300 W GaN final, drop-in circulator, 30 dB coupler, two-stage PIN/S
 <p align="center"><img src="docs/images/feed_board_schematic.jpg" alt="Element feed board schematic" width="49%"> <img src="docs/images/feed_board_3d.jpg" alt="Element feed board 3D view" width="49%"></p>
 
 ### RFSoC digitiser tile
-`hardware/rfsoc_tile/` · 324 per face · 118 parts · 187 nets · 🔄 24 err / 44 unrouted
+`hardware/rfsoc_tile/` · 324 per face · 118 parts · 187 nets · ✅ DRC clean
 
 📄 [Bill of materials (CSV)](hardware/rfsoc_tile/export/SENTINEL_TILE_BOM.csv) · [Schematic (PDF)](hardware/rfsoc_tile/export/SENTINEL_TILE_schematic.pdf) · [Gerbers](hardware/rfsoc_tile/export/gerbers)
 
-Carrier for a commercial RFSoC system-on-module: 9 receive channels (SMA → 1:2 balun → ADC), 9 transmit channels (DAC → centre-tapped balun → SMA), eight RS-485 module links, clock input, calibration control, QSFP28 (4 × 25 Gb/s) to the beamformer, 12 V → 3.3 V / 3 A buck.
+Carrier for a commercial RFSoC system-on-module: 9 receive channels (SMA → 1:2 balun → ADC), 9 transmit channels (DAC → centre-tapped balun → SMA), eight RS-485 module links, clock input, calibration control, QSFP28 (4 × 25 Gb/s) to the beamformer, 12 V → 3.3 V / 3 A buck. Routed with the EasyEDA Pro autorouter (Top / In2 / Bottom, In1 solid GND) and imported back into KiCad (`tools/import_easyeda.py`, `easyeda_routes.json`).
 
 <p align="center"><img src="docs/images/rfsoc_tile_schematic.jpg" alt="RFSoC digitiser tile schematic" width="49%"> <img src="docs/images/rfsoc_tile_3d.jpg" alt="RFSoC digitiser tile 3D view" width="49%"></p>
 
@@ -304,7 +304,7 @@ python report/build_report.py && python docs/make_figures.py && python docs/make
 | Element + array EM model | ✅ 61 elements, 3 frequencies, full coupling (thin-wire, infinite ground) |
 | Wide-angle match | ⚠️ ~−4 dB at 60°: needs a WAIM sheet and full-wave verification |
 | All 7 schematics | ✅ 0 ERC violations, exact netlist match |
-| PCB layouts | 5/7 DRC-clean; the rest are being routed |
+| PCB layouts | 6/7 DRC-clean; the rest are being routed |
 | Differential pairs | ⚠️ data-converter, LVDS and 25 Gb/s pairs are auto-routed as single nets; need a manual coupled, length-matched pass |
 | Pin maps not in the KiCad library | ⚠️ RFSoC SOM connector, PLL and RF modules use this project's own pin maps; map to the chosen parts' datasheets |
 | T/R module matching values | ⚠️ first-pass from device models; tune on a load-pull bench |

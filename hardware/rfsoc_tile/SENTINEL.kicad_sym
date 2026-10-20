@@ -1576,7 +1576,7 @@
 			(pin passive line
 				(at -12.7 63.5 0)
 				(length 2.54)
-				(name "TXD1"
+				(name "PPS_P"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -1594,7 +1594,7 @@
 			(pin passive line
 				(at 12.7 63.5 180)
 				(length 2.54)
-				(name "RXD1"
+				(name "TXD1"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -1612,7 +1612,7 @@
 			(pin passive line
 				(at -12.7 60.96 0)
 				(length 2.54)
-				(name "DE1"
+				(name "PPS_N"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -1630,7 +1630,7 @@
 			(pin passive line
 				(at 12.7 60.96 180)
 				(length 2.54)
-				(name "TX_EN_T1"
+				(name "RXD1"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -1648,7 +1648,7 @@
 			(pin passive line
 				(at -12.7 58.42 0)
 				(length 2.54)
-				(name "FAULT_N1"
+				(name "CAL_SEL0"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -1666,7 +1666,7 @@
 			(pin passive line
 				(at 12.7 58.42 180)
 				(length 2.54)
-				(name "TXD2"
+				(name "DE1"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -1684,7 +1684,7 @@
 			(pin passive line
 				(at -12.7 55.88 0)
 				(length 2.54)
-				(name "RXD2"
+				(name "CAL_SEL1"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -1702,7 +1702,7 @@
 			(pin passive line
 				(at 12.7 55.88 180)
 				(length 2.54)
-				(name "DE2"
+				(name "TX_EN_T1"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -1720,7 +1720,7 @@
 			(pin passive line
 				(at -12.7 53.34 0)
 				(length 2.54)
-				(name "TX_EN_T2"
+				(name "CAL_SEL2"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -1738,7 +1738,7 @@
 			(pin passive line
 				(at 12.7 53.34 180)
 				(length 2.54)
-				(name "FAULT_N2"
+				(name "FAULT_N1"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -1756,7 +1756,7 @@
 			(pin passive line
 				(at -12.7 50.8 0)
 				(length 2.54)
-				(name "TXD3"
+				(name "CAL_SW_EN"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -1774,7 +1774,7 @@
 			(pin passive line
 				(at 12.7 50.8 180)
 				(length 2.54)
-				(name "RXD3"
+				(name "TXD2"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -1792,7 +1792,7 @@
 			(pin passive line
 				(at -12.7 48.26 0)
 				(length 2.54)
-				(name "DE3"
+				(name "CAL_INJ_MEAS"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -1810,7 +1810,7 @@
 			(pin passive line
 				(at 12.7 48.26 180)
 				(length 2.54)
-				(name "TX_EN_T3"
+				(name "RXD2"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -1828,7 +1828,7 @@
 			(pin passive line
 				(at -12.7 45.72 0)
 				(length 2.54)
-				(name "FAULT_N3"
+				(name "PSU_TXD"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -1846,7 +1846,7 @@
 			(pin passive line
 				(at 12.7 45.72 180)
 				(length 2.54)
-				(name "TXD4"
+				(name "DE2"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -1864,7 +1864,7 @@
 			(pin passive line
 				(at -12.7 43.18 0)
 				(length 2.54)
-				(name "RXD4"
+				(name "PSU_RXD"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -1882,7 +1882,7 @@
 			(pin passive line
 				(at 12.7 43.18 180)
 				(length 2.54)
-				(name "DE4"
+				(name "TX_EN_T2"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -1900,7 +1900,7 @@
 			(pin passive line
 				(at -12.7 40.64 0)
 				(length 2.54)
-				(name "TX_EN_T4"
+				(name "PSU_DE"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -1918,7 +1918,7 @@
 			(pin passive line
 				(at 12.7 40.64 180)
 				(length 2.54)
-				(name "FAULT_N4"
+				(name "FAULT_N2"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -1936,7 +1936,7 @@
 			(pin passive line
 				(at -12.7 38.1 0)
 				(length 2.54)
-				(name "TXD5"
+				(name "MGT_REFCLK_P"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -1954,7 +1954,7 @@
 			(pin passive line
 				(at 12.7 38.1 180)
 				(length 2.54)
-				(name "RXD5"
+				(name "TXD3"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -1972,7 +1972,7 @@
 			(pin passive line
 				(at -12.7 35.56 0)
 				(length 2.54)
-				(name "DE5"
+				(name "MGT_REFCLK_N"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -1990,7 +1990,7 @@
 			(pin passive line
 				(at 12.7 35.56 180)
 				(length 2.54)
-				(name "TX_EN_T5"
+				(name "RXD3"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2008,7 +2008,7 @@
 			(pin passive line
 				(at -12.7 33.02 0)
 				(length 2.54)
-				(name "FAULT_N5"
+				(name "QSFP_SCL"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2026,7 +2026,7 @@
 			(pin passive line
 				(at 12.7 33.02 180)
 				(length 2.54)
-				(name "TXD6"
+				(name "DE3"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2044,7 +2044,7 @@
 			(pin passive line
 				(at -12.7 30.48 0)
 				(length 2.54)
-				(name "RXD6"
+				(name "QSFP_SDA"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2062,7 +2062,7 @@
 			(pin passive line
 				(at 12.7 30.48 180)
 				(length 2.54)
-				(name "DE6"
+				(name "TX_EN_T3"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2080,7 +2080,7 @@
 			(pin passive line
 				(at -12.7 27.94 0)
 				(length 2.54)
-				(name "TX_EN_T6"
+				(name "QSFP_MODSEL"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2098,7 +2098,7 @@
 			(pin passive line
 				(at 12.7 27.94 180)
 				(length 2.54)
-				(name "FAULT_N6"
+				(name "FAULT_N3"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2116,7 +2116,7 @@
 			(pin passive line
 				(at -12.7 25.4 0)
 				(length 2.54)
-				(name "TXD7"
+				(name "QSFP_RESET"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2134,7 +2134,7 @@
 			(pin passive line
 				(at 12.7 25.4 180)
 				(length 2.54)
-				(name "RXD7"
+				(name "TXD4"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2152,7 +2152,7 @@
 			(pin passive line
 				(at -12.7 22.86 0)
 				(length 2.54)
-				(name "DE7"
+				(name "QSFP_LPMODE"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2170,7 +2170,7 @@
 			(pin passive line
 				(at 12.7 22.86 180)
 				(length 2.54)
-				(name "TX_EN_T7"
+				(name "RXD4"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2188,7 +2188,7 @@
 			(pin passive line
 				(at -12.7 20.32 0)
 				(length 2.54)
-				(name "FAULT_N7"
+				(name "QSFP_INT"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2206,7 +2206,7 @@
 			(pin passive line
 				(at 12.7 20.32 180)
 				(length 2.54)
-				(name "TXD8"
+				(name "DE4"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2224,7 +2224,7 @@
 			(pin passive line
 				(at -12.7 17.78 0)
 				(length 2.54)
-				(name "RXD8"
+				(name "QSFP_PRS"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2242,7 +2242,7 @@
 			(pin passive line
 				(at 12.7 17.78 180)
 				(length 2.54)
-				(name "DE8"
+				(name "TX_EN_T4"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2260,7 +2260,7 @@
 			(pin passive line
 				(at -12.7 15.24 0)
 				(length 2.54)
-				(name "TX_EN_T8"
+				(name "QTX0_P"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2278,7 +2278,7 @@
 			(pin passive line
 				(at 12.7 15.24 180)
 				(length 2.54)
-				(name "FAULT_N8"
+				(name "FAULT_N4"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2296,7 +2296,7 @@
 			(pin passive line
 				(at -12.7 12.7 0)
 				(length 2.54)
-				(name "CAL_SEL0"
+				(name "QTX0_N"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2314,7 +2314,7 @@
 			(pin passive line
 				(at 12.7 12.7 180)
 				(length 2.54)
-				(name "CAL_SEL1"
+				(name "TXD5"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2332,7 +2332,7 @@
 			(pin passive line
 				(at -12.7 10.16 0)
 				(length 2.54)
-				(name "CAL_SEL2"
+				(name "QRX0_P"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2350,7 +2350,7 @@
 			(pin passive line
 				(at 12.7 10.16 180)
 				(length 2.54)
-				(name "CAL_SW_EN"
+				(name "RXD5"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2368,7 +2368,7 @@
 			(pin passive line
 				(at -12.7 7.62 0)
 				(length 2.54)
-				(name "CAL_INJ_MEAS"
+				(name "QRX0_N"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2386,7 +2386,7 @@
 			(pin passive line
 				(at 12.7 7.62 180)
 				(length 2.54)
-				(name "PPS_P"
+				(name "DE5"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2404,7 +2404,7 @@
 			(pin passive line
 				(at -12.7 5.08 0)
 				(length 2.54)
-				(name "PPS_N"
+				(name "QTX1_P"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2422,7 +2422,7 @@
 			(pin passive line
 				(at 12.7 5.08 180)
 				(length 2.54)
-				(name "PSU_TXD"
+				(name "TX_EN_T5"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2440,7 +2440,7 @@
 			(pin passive line
 				(at -12.7 2.54 0)
 				(length 2.54)
-				(name "PSU_RXD"
+				(name "QTX1_N"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2458,7 +2458,7 @@
 			(pin passive line
 				(at 12.7 2.54 180)
 				(length 2.54)
-				(name "PSU_DE"
+				(name "FAULT_N5"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2476,7 +2476,7 @@
 			(pin passive line
 				(at -12.7 0 0)
 				(length 2.54)
-				(name "QSFP_SCL"
+				(name "QRX1_P"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2494,7 +2494,7 @@
 			(pin passive line
 				(at 12.7 0 180)
 				(length 2.54)
-				(name "QSFP_SDA"
+				(name "TXD6"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2512,7 +2512,7 @@
 			(pin passive line
 				(at -12.7 -2.54 0)
 				(length 2.54)
-				(name "QSFP_MODSEL"
+				(name "QRX1_N"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2530,7 +2530,7 @@
 			(pin passive line
 				(at 12.7 -2.54 180)
 				(length 2.54)
-				(name "QSFP_RESET"
+				(name "RXD6"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2548,7 +2548,7 @@
 			(pin passive line
 				(at -12.7 -5.08 0)
 				(length 2.54)
-				(name "QSFP_LPMODE"
+				(name "QTX2_P"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2566,7 +2566,7 @@
 			(pin passive line
 				(at 12.7 -5.08 180)
 				(length 2.54)
-				(name "QSFP_INT"
+				(name "DE6"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2584,7 +2584,7 @@
 			(pin passive line
 				(at -12.7 -7.62 0)
 				(length 2.54)
-				(name "QSFP_PRS"
+				(name "QTX2_N"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2602,7 +2602,7 @@
 			(pin passive line
 				(at 12.7 -7.62 180)
 				(length 2.54)
-				(name "MGT_REFCLK_P"
+				(name "TX_EN_T6"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2620,7 +2620,7 @@
 			(pin passive line
 				(at -12.7 -10.16 0)
 				(length 2.54)
-				(name "MGT_REFCLK_N"
+				(name "QRX2_P"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2638,7 +2638,7 @@
 			(pin passive line
 				(at 12.7 -10.16 180)
 				(length 2.54)
-				(name "QTX0_P"
+				(name "FAULT_N6"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2656,7 +2656,7 @@
 			(pin passive line
 				(at -12.7 -12.7 0)
 				(length 2.54)
-				(name "QTX0_N"
+				(name "QRX2_N"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2674,7 +2674,7 @@
 			(pin passive line
 				(at 12.7 -12.7 180)
 				(length 2.54)
-				(name "QRX0_P"
+				(name "TXD7"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2692,7 +2692,7 @@
 			(pin passive line
 				(at -12.7 -15.24 0)
 				(length 2.54)
-				(name "QRX0_N"
+				(name "QTX3_P"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2710,7 +2710,7 @@
 			(pin passive line
 				(at 12.7 -15.24 180)
 				(length 2.54)
-				(name "QTX1_P"
+				(name "RXD7"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2728,7 +2728,7 @@
 			(pin passive line
 				(at -12.7 -17.78 0)
 				(length 2.54)
-				(name "QTX1_N"
+				(name "QTX3_N"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2746,7 +2746,7 @@
 			(pin passive line
 				(at 12.7 -17.78 180)
 				(length 2.54)
-				(name "QRX1_P"
+				(name "DE7"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2764,7 +2764,7 @@
 			(pin passive line
 				(at -12.7 -20.32 0)
 				(length 2.54)
-				(name "QRX1_N"
+				(name "QRX3_P"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2782,7 +2782,7 @@
 			(pin passive line
 				(at 12.7 -20.32 180)
 				(length 2.54)
-				(name "QTX2_P"
+				(name "TX_EN_T7"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2800,7 +2800,7 @@
 			(pin passive line
 				(at -12.7 -22.86 0)
 				(length 2.54)
-				(name "QTX2_N"
+				(name "QRX3_N"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2818,7 +2818,7 @@
 			(pin passive line
 				(at 12.7 -22.86 180)
 				(length 2.54)
-				(name "QRX2_P"
+				(name "FAULT_N7"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2836,7 +2836,7 @@
 			(pin passive line
 				(at -12.7 -25.4 0)
 				(length 2.54)
-				(name "QRX2_N"
+				(name "+12V"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2854,7 +2854,7 @@
 			(pin passive line
 				(at 12.7 -25.4 180)
 				(length 2.54)
-				(name "QTX3_P"
+				(name "TXD8"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2872,7 +2872,7 @@
 			(pin passive line
 				(at -12.7 -27.94 0)
 				(length 2.54)
-				(name "QTX3_N"
+				(name "+12V"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2890,7 +2890,7 @@
 			(pin passive line
 				(at 12.7 -27.94 180)
 				(length 2.54)
-				(name "QRX3_P"
+				(name "RXD8"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2908,7 +2908,7 @@
 			(pin passive line
 				(at -12.7 -30.48 0)
 				(length 2.54)
-				(name "QRX3_N"
+				(name "+12V"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2926,7 +2926,7 @@
 			(pin passive line
 				(at 12.7 -30.48 180)
 				(length 2.54)
-				(name "+12V"
+				(name "DE8"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2962,7 +2962,7 @@
 			(pin passive line
 				(at 12.7 -33.02 180)
 				(length 2.54)
-				(name "+12V"
+				(name "TX_EN_T8"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2998,7 +2998,7 @@
 			(pin passive line
 				(at 12.7 -35.56 180)
 				(length 2.54)
-				(name "+12V"
+				(name "FAULT_N8"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -3034,7 +3034,7 @@
 			(pin passive line
 				(at 12.7 -38.1 180)
 				(length 2.54)
-				(name "+12V"
+				(name "GND"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -3052,7 +3052,7 @@
 			(pin passive line
 				(at -12.7 -40.64 0)
 				(length 2.54)
-				(name "GND"
+				(name "+12V"
 					(effects
 						(font
 							(size 1.016 1.016)

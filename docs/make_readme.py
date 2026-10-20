@@ -58,7 +58,9 @@ def main():
                       f"the EM model (x: series 11.2 nH; y: shunt 3.9 pF + series 20.7 nH), 1:1 baluns, static-bleed chokes.",
         "rfsoc_tile": "Carrier for a commercial RFSoC system-on-module: 9 receive channels (SMA → 1:2 balun → ADC), 9 transmit "
                       "channels (DAC → centre-tapped balun → SMA), eight RS-485 module links, clock input, calibration "
-                      "control, QSFP28 (4 × 25 Gb/s) to the beamformer, 12 V → 3.3 V / 3 A buck.",
+                      "control, QSFP28 (4 × 25 Gb/s) to the beamformer, 12 V → 3.3 V / 3 A buck. Routed with the "
+                      "EasyEDA Pro autorouter (Top / In2 / Bottom, In1 solid GND) and imported back into KiCad "
+                      "(`tools/import_easyeda.py`, `easyeda_routes.json`).",
         "backplane": "Eight module slots. Each gets a 15 A fuse on the 50 V drain bus and a resettable fuse on 12 V aux. "
                      "All control lines run point-to-point to one 40-pin cable for the tile, so a faulty module cannot "
                      "disturb its neighbours.",

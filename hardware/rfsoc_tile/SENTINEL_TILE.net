@@ -2,7 +2,7 @@
 	(version "E")
 	(design
 		(source "C:\\Users\\ahmad\\Documents\\Ground based early setection radar\\hardware\\rfsoc_tile\\SENTINEL_TILE.kicad_sch")
-		(date "2026-10-19T00:53:08")
+		(date "2026-10-20T16:14:32")
 		(tool "Eeschema 10.0.3")
 		(sheet
 			(number "1")
@@ -8840,382 +8840,382 @@
 			(pins
 				(pin
 					(num "1")
-					(name "TXD1")
-					(type "passive")
-				)
-				(pin
-					(num "2")
-					(name "RXD1")
-					(type "passive")
-				)
-				(pin
-					(num "3")
-					(name "DE1")
-					(type "passive")
-				)
-				(pin
-					(num "4")
-					(name "TX_EN_T1")
-					(type "passive")
-				)
-				(pin
-					(num "5")
-					(name "FAULT_N1")
-					(type "passive")
-				)
-				(pin
-					(num "6")
-					(name "TXD2")
-					(type "passive")
-				)
-				(pin
-					(num "7")
-					(name "RXD2")
-					(type "passive")
-				)
-				(pin
-					(num "8")
-					(name "DE2")
-					(type "passive")
-				)
-				(pin
-					(num "9")
-					(name "TX_EN_T2")
-					(type "passive")
-				)
-				(pin
-					(num "10")
-					(name "FAULT_N2")
-					(type "passive")
-				)
-				(pin
-					(num "11")
-					(name "TXD3")
-					(type "passive")
-				)
-				(pin
-					(num "12")
-					(name "RXD3")
-					(type "passive")
-				)
-				(pin
-					(num "13")
-					(name "DE3")
-					(type "passive")
-				)
-				(pin
-					(num "14")
-					(name "TX_EN_T3")
-					(type "passive")
-				)
-				(pin
-					(num "15")
-					(name "FAULT_N3")
-					(type "passive")
-				)
-				(pin
-					(num "16")
-					(name "TXD4")
-					(type "passive")
-				)
-				(pin
-					(num "17")
-					(name "RXD4")
-					(type "passive")
-				)
-				(pin
-					(num "18")
-					(name "DE4")
-					(type "passive")
-				)
-				(pin
-					(num "19")
-					(name "TX_EN_T4")
-					(type "passive")
-				)
-				(pin
-					(num "20")
-					(name "FAULT_N4")
-					(type "passive")
-				)
-				(pin
-					(num "21")
-					(name "TXD5")
-					(type "passive")
-				)
-				(pin
-					(num "22")
-					(name "RXD5")
-					(type "passive")
-				)
-				(pin
-					(num "23")
-					(name "DE5")
-					(type "passive")
-				)
-				(pin
-					(num "24")
-					(name "TX_EN_T5")
-					(type "passive")
-				)
-				(pin
-					(num "25")
-					(name "FAULT_N5")
-					(type "passive")
-				)
-				(pin
-					(num "26")
-					(name "TXD6")
-					(type "passive")
-				)
-				(pin
-					(num "27")
-					(name "RXD6")
-					(type "passive")
-				)
-				(pin
-					(num "28")
-					(name "DE6")
-					(type "passive")
-				)
-				(pin
-					(num "29")
-					(name "TX_EN_T6")
-					(type "passive")
-				)
-				(pin
-					(num "30")
-					(name "FAULT_N6")
-					(type "passive")
-				)
-				(pin
-					(num "31")
-					(name "TXD7")
-					(type "passive")
-				)
-				(pin
-					(num "32")
-					(name "RXD7")
-					(type "passive")
-				)
-				(pin
-					(num "33")
-					(name "DE7")
-					(type "passive")
-				)
-				(pin
-					(num "34")
-					(name "TX_EN_T7")
-					(type "passive")
-				)
-				(pin
-					(num "35")
-					(name "FAULT_N7")
-					(type "passive")
-				)
-				(pin
-					(num "36")
-					(name "TXD8")
-					(type "passive")
-				)
-				(pin
-					(num "37")
-					(name "RXD8")
-					(type "passive")
-				)
-				(pin
-					(num "38")
-					(name "DE8")
-					(type "passive")
-				)
-				(pin
-					(num "39")
-					(name "TX_EN_T8")
-					(type "passive")
-				)
-				(pin
-					(num "40")
-					(name "FAULT_N8")
-					(type "passive")
-				)
-				(pin
-					(num "41")
-					(name "CAL_SEL0")
-					(type "passive")
-				)
-				(pin
-					(num "42")
-					(name "CAL_SEL1")
-					(type "passive")
-				)
-				(pin
-					(num "43")
-					(name "CAL_SEL2")
-					(type "passive")
-				)
-				(pin
-					(num "44")
-					(name "CAL_SW_EN")
-					(type "passive")
-				)
-				(pin
-					(num "45")
-					(name "CAL_INJ_MEAS")
-					(type "passive")
-				)
-				(pin
-					(num "46")
 					(name "PPS_P")
 					(type "passive")
 				)
 				(pin
-					(num "47")
+					(num "2")
+					(name "TXD1")
+					(type "passive")
+				)
+				(pin
+					(num "3")
 					(name "PPS_N")
 					(type "passive")
 				)
 				(pin
-					(num "48")
+					(num "4")
+					(name "RXD1")
+					(type "passive")
+				)
+				(pin
+					(num "5")
+					(name "CAL_SEL0")
+					(type "passive")
+				)
+				(pin
+					(num "6")
+					(name "DE1")
+					(type "passive")
+				)
+				(pin
+					(num "7")
+					(name "CAL_SEL1")
+					(type "passive")
+				)
+				(pin
+					(num "8")
+					(name "TX_EN_T1")
+					(type "passive")
+				)
+				(pin
+					(num "9")
+					(name "CAL_SEL2")
+					(type "passive")
+				)
+				(pin
+					(num "10")
+					(name "FAULT_N1")
+					(type "passive")
+				)
+				(pin
+					(num "11")
+					(name "CAL_SW_EN")
+					(type "passive")
+				)
+				(pin
+					(num "12")
+					(name "TXD2")
+					(type "passive")
+				)
+				(pin
+					(num "13")
+					(name "CAL_INJ_MEAS")
+					(type "passive")
+				)
+				(pin
+					(num "14")
+					(name "RXD2")
+					(type "passive")
+				)
+				(pin
+					(num "15")
 					(name "PSU_TXD")
 					(type "passive")
 				)
 				(pin
-					(num "49")
+					(num "16")
+					(name "DE2")
+					(type "passive")
+				)
+				(pin
+					(num "17")
 					(name "PSU_RXD")
 					(type "passive")
 				)
 				(pin
-					(num "50")
+					(num "18")
+					(name "TX_EN_T2")
+					(type "passive")
+				)
+				(pin
+					(num "19")
 					(name "PSU_DE")
 					(type "passive")
 				)
 				(pin
-					(num "51")
-					(name "QSFP_SCL")
+					(num "20")
+					(name "FAULT_N2")
 					(type "passive")
 				)
 				(pin
-					(num "52")
-					(name "QSFP_SDA")
-					(type "passive")
-				)
-				(pin
-					(num "53")
-					(name "QSFP_MODSEL")
-					(type "passive")
-				)
-				(pin
-					(num "54")
-					(name "QSFP_RESET")
-					(type "passive")
-				)
-				(pin
-					(num "55")
-					(name "QSFP_LPMODE")
-					(type "passive")
-				)
-				(pin
-					(num "56")
-					(name "QSFP_INT")
-					(type "passive")
-				)
-				(pin
-					(num "57")
-					(name "QSFP_PRS")
-					(type "passive")
-				)
-				(pin
-					(num "58")
+					(num "21")
 					(name "MGT_REFCLK_P")
 					(type "passive")
 				)
 				(pin
-					(num "59")
+					(num "22")
+					(name "TXD3")
+					(type "passive")
+				)
+				(pin
+					(num "23")
 					(name "MGT_REFCLK_N")
 					(type "passive")
 				)
 				(pin
-					(num "60")
+					(num "24")
+					(name "RXD3")
+					(type "passive")
+				)
+				(pin
+					(num "25")
+					(name "QSFP_SCL")
+					(type "passive")
+				)
+				(pin
+					(num "26")
+					(name "DE3")
+					(type "passive")
+				)
+				(pin
+					(num "27")
+					(name "QSFP_SDA")
+					(type "passive")
+				)
+				(pin
+					(num "28")
+					(name "TX_EN_T3")
+					(type "passive")
+				)
+				(pin
+					(num "29")
+					(name "QSFP_MODSEL")
+					(type "passive")
+				)
+				(pin
+					(num "30")
+					(name "FAULT_N3")
+					(type "passive")
+				)
+				(pin
+					(num "31")
+					(name "QSFP_RESET")
+					(type "passive")
+				)
+				(pin
+					(num "32")
+					(name "TXD4")
+					(type "passive")
+				)
+				(pin
+					(num "33")
+					(name "QSFP_LPMODE")
+					(type "passive")
+				)
+				(pin
+					(num "34")
+					(name "RXD4")
+					(type "passive")
+				)
+				(pin
+					(num "35")
+					(name "QSFP_INT")
+					(type "passive")
+				)
+				(pin
+					(num "36")
+					(name "DE4")
+					(type "passive")
+				)
+				(pin
+					(num "37")
+					(name "QSFP_PRS")
+					(type "passive")
+				)
+				(pin
+					(num "38")
+					(name "TX_EN_T4")
+					(type "passive")
+				)
+				(pin
+					(num "39")
 					(name "QTX0_P")
 					(type "passive")
 				)
 				(pin
-					(num "61")
+					(num "40")
+					(name "FAULT_N4")
+					(type "passive")
+				)
+				(pin
+					(num "41")
 					(name "QTX0_N")
 					(type "passive")
 				)
 				(pin
-					(num "62")
+					(num "42")
+					(name "TXD5")
+					(type "passive")
+				)
+				(pin
+					(num "43")
 					(name "QRX0_P")
 					(type "passive")
 				)
 				(pin
-					(num "63")
+					(num "44")
+					(name "RXD5")
+					(type "passive")
+				)
+				(pin
+					(num "45")
 					(name "QRX0_N")
 					(type "passive")
 				)
 				(pin
-					(num "64")
+					(num "46")
+					(name "DE5")
+					(type "passive")
+				)
+				(pin
+					(num "47")
 					(name "QTX1_P")
 					(type "passive")
 				)
 				(pin
-					(num "65")
+					(num "48")
+					(name "TX_EN_T5")
+					(type "passive")
+				)
+				(pin
+					(num "49")
 					(name "QTX1_N")
 					(type "passive")
 				)
 				(pin
-					(num "66")
+					(num "50")
+					(name "FAULT_N5")
+					(type "passive")
+				)
+				(pin
+					(num "51")
 					(name "QRX1_P")
 					(type "passive")
 				)
 				(pin
-					(num "67")
+					(num "52")
+					(name "TXD6")
+					(type "passive")
+				)
+				(pin
+					(num "53")
 					(name "QRX1_N")
 					(type "passive")
 				)
 				(pin
-					(num "68")
+					(num "54")
+					(name "RXD6")
+					(type "passive")
+				)
+				(pin
+					(num "55")
 					(name "QTX2_P")
 					(type "passive")
 				)
 				(pin
-					(num "69")
+					(num "56")
+					(name "DE6")
+					(type "passive")
+				)
+				(pin
+					(num "57")
 					(name "QTX2_N")
 					(type "passive")
 				)
 				(pin
-					(num "70")
+					(num "58")
+					(name "TX_EN_T6")
+					(type "passive")
+				)
+				(pin
+					(num "59")
 					(name "QRX2_P")
 					(type "passive")
 				)
 				(pin
-					(num "71")
+					(num "60")
+					(name "FAULT_N6")
+					(type "passive")
+				)
+				(pin
+					(num "61")
 					(name "QRX2_N")
 					(type "passive")
 				)
 				(pin
-					(num "72")
+					(num "62")
+					(name "TXD7")
+					(type "passive")
+				)
+				(pin
+					(num "63")
 					(name "QTX3_P")
 					(type "passive")
 				)
 				(pin
-					(num "73")
+					(num "64")
+					(name "RXD7")
+					(type "passive")
+				)
+				(pin
+					(num "65")
 					(name "QTX3_N")
 					(type "passive")
 				)
 				(pin
-					(num "74")
+					(num "66")
+					(name "DE7")
+					(type "passive")
+				)
+				(pin
+					(num "67")
 					(name "QRX3_P")
 					(type "passive")
 				)
 				(pin
-					(num "75")
+					(num "68")
+					(name "TX_EN_T7")
+					(type "passive")
+				)
+				(pin
+					(num "69")
 					(name "QRX3_N")
 					(type "passive")
 				)
 				(pin
-					(num "76")
+					(num "70")
+					(name "FAULT_N7")
+					(type "passive")
+				)
+				(pin
+					(num "71")
 					(name "+12V")
+					(type "passive")
+				)
+				(pin
+					(num "72")
+					(name "TXD8")
+					(type "passive")
+				)
+				(pin
+					(num "73")
+					(name "+12V")
+					(type "passive")
+				)
+				(pin
+					(num "74")
+					(name "RXD8")
+					(type "passive")
+				)
+				(pin
+					(num "75")
+					(name "+12V")
+					(type "passive")
+				)
+				(pin
+					(num "76")
+					(name "DE8")
 					(type "passive")
 				)
 				(pin
@@ -9225,7 +9225,7 @@
 				)
 				(pin
 					(num "78")
-					(name "+12V")
+					(name "TX_EN_T8")
 					(type "passive")
 				)
 				(pin
@@ -9235,7 +9235,7 @@
 				)
 				(pin
 					(num "80")
-					(name "+12V")
+					(name "FAULT_N8")
 					(type "passive")
 				)
 				(pin
@@ -9245,12 +9245,12 @@
 				)
 				(pin
 					(num "82")
-					(name "+12V")
+					(name "GND")
 					(type "passive")
 				)
 				(pin
 					(num "83")
-					(name "GND")
+					(name "+12V")
 					(type "passive")
 				)
 				(pin
@@ -9582,8 +9582,20 @@
 			)
 			(node
 				(ref "J2")
-				(pin "76")
-				(pinfunction "+12V_76")
+				(pin "71")
+				(pinfunction "+12V_71")
+				(pintype "passive")
+			)
+			(node
+				(ref "J2")
+				(pin "73")
+				(pinfunction "+12V_73")
+				(pintype "passive")
+			)
+			(node
+				(ref "J2")
+				(pin "75")
+				(pinfunction "+12V_75")
 				(pintype "passive")
 			)
 			(node
@@ -9594,20 +9606,8 @@
 			)
 			(node
 				(ref "J2")
-				(pin "78")
-				(pinfunction "+12V_78")
-				(pintype "passive")
-			)
-			(node
-				(ref "J2")
 				(pin "79")
 				(pinfunction "+12V_79")
-				(pintype "passive")
-			)
-			(node
-				(ref "J2")
-				(pin "80")
-				(pinfunction "+12V_80")
 				(pintype "passive")
 			)
 			(node
@@ -9618,8 +9618,8 @@
 			)
 			(node
 				(ref "J2")
-				(pin "82")
-				(pinfunction "+12V_82")
+				(pin "83")
+				(pinfunction "+12V_83")
 				(pintype "passive")
 			)
 			(node
@@ -10383,8 +10383,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "45")
-				(pinfunction "CAL_INJ_MEAS_45")
+				(pin "13")
+				(pinfunction "CAL_INJ_MEAS_13")
 				(pintype "passive")
 			)
 			(node
@@ -10400,8 +10400,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "41")
-				(pinfunction "CAL_SEL0_41")
+				(pin "5")
+				(pinfunction "CAL_SEL0_5")
 				(pintype "passive")
 			)
 			(node
@@ -10417,8 +10417,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "42")
-				(pinfunction "CAL_SEL1_42")
+				(pin "7")
+				(pinfunction "CAL_SEL1_7")
 				(pintype "passive")
 			)
 			(node
@@ -10434,8 +10434,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "43")
-				(pinfunction "CAL_SEL2_43")
+				(pin "9")
+				(pinfunction "CAL_SEL2_9")
 				(pintype "passive")
 			)
 			(node
@@ -10451,8 +10451,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "44")
-				(pinfunction "CAL_SW_EN_44")
+				(pin "11")
+				(pinfunction "CAL_SW_EN_11")
 				(pintype "passive")
 			)
 			(node
@@ -10892,8 +10892,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "3")
-				(pinfunction "DE1_3")
+				(pin "6")
+				(pinfunction "DE1_6")
 				(pintype "passive")
 			)
 			(node
@@ -10915,8 +10915,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "8")
-				(pinfunction "DE2_8")
+				(pin "16")
+				(pinfunction "DE2_16")
 				(pintype "passive")
 			)
 			(node
@@ -10938,8 +10938,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "13")
-				(pinfunction "DE3_13")
+				(pin "26")
+				(pinfunction "DE3_26")
 				(pintype "passive")
 			)
 			(node
@@ -10961,8 +10961,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "18")
-				(pinfunction "DE4_18")
+				(pin "36")
+				(pinfunction "DE4_36")
 				(pintype "passive")
 			)
 			(node
@@ -10984,8 +10984,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "23")
-				(pinfunction "DE5_23")
+				(pin "46")
+				(pinfunction "DE5_46")
 				(pintype "passive")
 			)
 			(node
@@ -11007,8 +11007,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "28")
-				(pinfunction "DE6_28")
+				(pin "56")
+				(pinfunction "DE6_56")
 				(pintype "passive")
 			)
 			(node
@@ -11030,8 +11030,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "33")
-				(pinfunction "DE7_33")
+				(pin "66")
+				(pinfunction "DE7_66")
 				(pintype "passive")
 			)
 			(node
@@ -11053,8 +11053,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "38")
-				(pinfunction "DE8_38")
+				(pin "76")
+				(pinfunction "DE8_76")
 				(pintype "passive")
 			)
 			(node
@@ -11076,8 +11076,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "5")
-				(pinfunction "FAULT_N1_5")
+				(pin "10")
+				(pinfunction "FAULT_N1_10")
 				(pintype "passive")
 			)
 			(node
@@ -11093,8 +11093,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "10")
-				(pinfunction "FAULT_N2_10")
+				(pin "20")
+				(pinfunction "FAULT_N2_20")
 				(pintype "passive")
 			)
 			(node
@@ -11110,8 +11110,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "15")
-				(pinfunction "FAULT_N3_15")
+				(pin "30")
+				(pinfunction "FAULT_N3_30")
 				(pintype "passive")
 			)
 			(node
@@ -11127,8 +11127,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "20")
-				(pinfunction "FAULT_N4_20")
+				(pin "40")
+				(pinfunction "FAULT_N4_40")
 				(pintype "passive")
 			)
 			(node
@@ -11144,8 +11144,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "25")
-				(pinfunction "FAULT_N5_25")
+				(pin "50")
+				(pinfunction "FAULT_N5_50")
 				(pintype "passive")
 			)
 			(node
@@ -11161,8 +11161,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "30")
-				(pinfunction "FAULT_N6_30")
+				(pin "60")
+				(pinfunction "FAULT_N6_60")
 				(pintype "passive")
 			)
 			(node
@@ -11178,8 +11178,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "35")
-				(pinfunction "FAULT_N7_35")
+				(pin "70")
+				(pinfunction "FAULT_N7_70")
 				(pintype "passive")
 			)
 			(node
@@ -11195,8 +11195,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "40")
-				(pinfunction "FAULT_N8_40")
+				(pin "80")
+				(pinfunction "FAULT_N8_80")
 				(pintype "passive")
 			)
 			(node
@@ -11233,8 +11233,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "59")
-				(pinfunction "MGT_REFCLK_N_59")
+				(pin "23")
+				(pinfunction "MGT_REFCLK_N_23")
 				(pintype "passive")
 			)
 			(node
@@ -11249,8 +11249,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "58")
-				(pinfunction "MGT_REFCLK_P_58")
+				(pin "21")
+				(pinfunction "MGT_REFCLK_P_21")
 				(pintype "passive")
 			)
 			(node
@@ -11281,8 +11281,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "47")
-				(pinfunction "PPS_N_47")
+				(pin "3")
+				(pinfunction "PPS_N_3")
 				(pintype "passive")
 			)
 			(node
@@ -11303,8 +11303,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "46")
-				(pinfunction "PPS_P_46")
+				(pin "1")
+				(pinfunction "PPS_P_1")
 				(pintype "passive")
 			)
 			(node
@@ -11359,8 +11359,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "50")
-				(pinfunction "PSU_DE_50")
+				(pin "19")
+				(pinfunction "PSU_DE_19")
 				(pintype "passive")
 			)
 			(node
@@ -11382,8 +11382,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "49")
-				(pinfunction "PSU_RXD_49")
+				(pin "17")
+				(pinfunction "PSU_RXD_17")
 				(pintype "passive")
 			)
 			(node
@@ -11399,8 +11399,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "48")
-				(pinfunction "PSU_TXD_48")
+				(pin "15")
+				(pinfunction "PSU_TXD_15")
 				(pintype "passive")
 			)
 			(node
@@ -11416,8 +11416,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "63")
-				(pinfunction "QRX0_N_63")
+				(pin "45")
+				(pinfunction "QRX0_N_45")
 				(pintype "passive")
 			)
 			(node
@@ -11433,8 +11433,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "62")
-				(pinfunction "QRX0_P_62")
+				(pin "43")
+				(pinfunction "QRX0_P_43")
 				(pintype "passive")
 			)
 			(node
@@ -11450,8 +11450,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "67")
-				(pinfunction "QRX1_N_67")
+				(pin "53")
+				(pinfunction "QRX1_N_53")
 				(pintype "passive")
 			)
 			(node
@@ -11467,8 +11467,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "66")
-				(pinfunction "QRX1_P_66")
+				(pin "51")
+				(pinfunction "QRX1_P_51")
 				(pintype "passive")
 			)
 			(node
@@ -11484,8 +11484,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "71")
-				(pinfunction "QRX2_N_71")
+				(pin "61")
+				(pinfunction "QRX2_N_61")
 				(pintype "passive")
 			)
 			(node
@@ -11501,8 +11501,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "70")
-				(pinfunction "QRX2_P_70")
+				(pin "59")
+				(pinfunction "QRX2_P_59")
 				(pintype "passive")
 			)
 			(node
@@ -11518,8 +11518,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "75")
-				(pinfunction "QRX3_N_75")
+				(pin "69")
+				(pinfunction "QRX3_N_69")
 				(pintype "passive")
 			)
 			(node
@@ -11535,8 +11535,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "74")
-				(pinfunction "QRX3_P_74")
+				(pin "67")
+				(pinfunction "QRX3_P_67")
 				(pintype "passive")
 			)
 			(node
@@ -11552,8 +11552,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "56")
-				(pinfunction "QSFP_INT_56")
+				(pin "35")
+				(pinfunction "QSFP_INT_35")
 				(pintype "passive")
 			)
 			(node
@@ -11574,8 +11574,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "55")
-				(pinfunction "QSFP_LPMODE_55")
+				(pin "33")
+				(pinfunction "QSFP_LPMODE_33")
 				(pintype "passive")
 			)
 			(node
@@ -11591,8 +11591,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "53")
-				(pinfunction "QSFP_MODSEL_53")
+				(pin "29")
+				(pinfunction "QSFP_MODSEL_29")
 				(pintype "passive")
 			)
 			(node
@@ -11608,8 +11608,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "57")
-				(pinfunction "QSFP_PRS_57")
+				(pin "37")
+				(pinfunction "QSFP_PRS_37")
 				(pintype "passive")
 			)
 			(node
@@ -11630,8 +11630,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "54")
-				(pinfunction "QSFP_RESET_54")
+				(pin "31")
+				(pinfunction "QSFP_RESET_31")
 				(pintype "passive")
 			)
 			(node
@@ -11647,8 +11647,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "51")
-				(pinfunction "QSFP_SCL_51")
+				(pin "25")
+				(pinfunction "QSFP_SCL_25")
 				(pintype "passive")
 			)
 			(node
@@ -11669,8 +11669,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "52")
-				(pinfunction "QSFP_SDA_52")
+				(pin "27")
+				(pinfunction "QSFP_SDA_27")
 				(pintype "passive")
 			)
 			(node
@@ -11691,8 +11691,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "61")
-				(pinfunction "QTX0_N_61")
+				(pin "41")
+				(pinfunction "QTX0_N_41")
 				(pintype "passive")
 			)
 			(node
@@ -11708,8 +11708,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "60")
-				(pinfunction "QTX0_P_60")
+				(pin "39")
+				(pinfunction "QTX0_P_39")
 				(pintype "passive")
 			)
 			(node
@@ -11725,8 +11725,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "65")
-				(pinfunction "QTX1_N_65")
+				(pin "49")
+				(pinfunction "QTX1_N_49")
 				(pintype "passive")
 			)
 			(node
@@ -11742,8 +11742,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "64")
-				(pinfunction "QTX1_P_64")
+				(pin "47")
+				(pinfunction "QTX1_P_47")
 				(pintype "passive")
 			)
 			(node
@@ -11759,8 +11759,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "69")
-				(pinfunction "QTX2_N_69")
+				(pin "57")
+				(pinfunction "QTX2_N_57")
 				(pintype "passive")
 			)
 			(node
@@ -11776,8 +11776,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "68")
-				(pinfunction "QTX2_P_68")
+				(pin "55")
+				(pinfunction "QTX2_P_55")
 				(pintype "passive")
 			)
 			(node
@@ -11793,8 +11793,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "73")
-				(pinfunction "QTX3_N_73")
+				(pin "65")
+				(pinfunction "QTX3_N_65")
 				(pintype "passive")
 			)
 			(node
@@ -11810,8 +11810,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "72")
-				(pinfunction "QTX3_P_72")
+				(pin "63")
+				(pinfunction "QTX3_P_63")
 				(pintype "passive")
 			)
 			(node
@@ -12099,8 +12099,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "2")
-				(pinfunction "RXD1_2")
+				(pin "4")
+				(pinfunction "RXD1_4")
 				(pintype "passive")
 			)
 			(node
@@ -12116,8 +12116,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "7")
-				(pinfunction "RXD2_7")
+				(pin "14")
+				(pinfunction "RXD2_14")
 				(pintype "passive")
 			)
 			(node
@@ -12133,8 +12133,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "12")
-				(pinfunction "RXD3_12")
+				(pin "24")
+				(pinfunction "RXD3_24")
 				(pintype "passive")
 			)
 			(node
@@ -12150,8 +12150,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "17")
-				(pinfunction "RXD4_17")
+				(pin "34")
+				(pinfunction "RXD4_34")
 				(pintype "passive")
 			)
 			(node
@@ -12167,8 +12167,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "22")
-				(pinfunction "RXD5_22")
+				(pin "44")
+				(pinfunction "RXD5_44")
 				(pintype "passive")
 			)
 			(node
@@ -12184,8 +12184,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "27")
-				(pinfunction "RXD6_27")
+				(pin "54")
+				(pinfunction "RXD6_54")
 				(pintype "passive")
 			)
 			(node
@@ -12201,8 +12201,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "32")
-				(pinfunction "RXD7_32")
+				(pin "64")
+				(pinfunction "RXD7_64")
 				(pintype "passive")
 			)
 			(node
@@ -12218,8 +12218,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "37")
-				(pinfunction "RXD8_37")
+				(pin "74")
+				(pinfunction "RXD8_74")
 				(pintype "passive")
 			)
 			(node
@@ -12454,8 +12454,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "1")
-				(pinfunction "TXD1_1")
+				(pin "2")
+				(pinfunction "TXD1_2")
 				(pintype "passive")
 			)
 			(node
@@ -12471,8 +12471,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "6")
-				(pinfunction "TXD2_6")
+				(pin "12")
+				(pinfunction "TXD2_12")
 				(pintype "passive")
 			)
 			(node
@@ -12488,8 +12488,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "11")
-				(pinfunction "TXD3_11")
+				(pin "22")
+				(pinfunction "TXD3_22")
 				(pintype "passive")
 			)
 			(node
@@ -12505,8 +12505,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "16")
-				(pinfunction "TXD4_16")
+				(pin "32")
+				(pinfunction "TXD4_32")
 				(pintype "passive")
 			)
 			(node
@@ -12522,8 +12522,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "21")
-				(pinfunction "TXD5_21")
+				(pin "42")
+				(pinfunction "TXD5_42")
 				(pintype "passive")
 			)
 			(node
@@ -12539,8 +12539,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "26")
-				(pinfunction "TXD6_26")
+				(pin "52")
+				(pinfunction "TXD6_52")
 				(pintype "passive")
 			)
 			(node
@@ -12556,8 +12556,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "31")
-				(pinfunction "TXD7_31")
+				(pin "62")
+				(pinfunction "TXD7_62")
 				(pintype "passive")
 			)
 			(node
@@ -12573,8 +12573,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "36")
-				(pinfunction "TXD8_36")
+				(pin "72")
+				(pinfunction "TXD8_72")
 				(pintype "passive")
 			)
 			(node
@@ -12743,8 +12743,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "4")
-				(pinfunction "TX_EN_T1_4")
+				(pin "8")
+				(pinfunction "TX_EN_T1_8")
 				(pintype "passive")
 			)
 			(node
@@ -12760,8 +12760,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "9")
-				(pinfunction "TX_EN_T2_9")
+				(pin "18")
+				(pinfunction "TX_EN_T2_18")
 				(pintype "passive")
 			)
 			(node
@@ -12777,8 +12777,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "14")
-				(pinfunction "TX_EN_T3_14")
+				(pin "28")
+				(pinfunction "TX_EN_T3_28")
 				(pintype "passive")
 			)
 			(node
@@ -12794,8 +12794,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "19")
-				(pinfunction "TX_EN_T4_19")
+				(pin "38")
+				(pinfunction "TX_EN_T4_38")
 				(pintype "passive")
 			)
 			(node
@@ -12811,8 +12811,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "24")
-				(pinfunction "TX_EN_T5_24")
+				(pin "48")
+				(pinfunction "TX_EN_T5_48")
 				(pintype "passive")
 			)
 			(node
@@ -12828,8 +12828,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "29")
-				(pinfunction "TX_EN_T6_29")
+				(pin "58")
+				(pinfunction "TX_EN_T6_58")
 				(pintype "passive")
 			)
 			(node
@@ -12845,8 +12845,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "34")
-				(pinfunction "TX_EN_T7_34")
+				(pin "68")
+				(pinfunction "TX_EN_T7_68")
 				(pintype "passive")
 			)
 			(node
@@ -12862,8 +12862,8 @@
 			(class "Default")
 			(node
 				(ref "J2")
-				(pin "39")
-				(pinfunction "TX_EN_T8_39")
+				(pin "78")
+				(pinfunction "TX_EN_T8_78")
 				(pintype "passive")
 			)
 			(node
@@ -13359,8 +13359,8 @@
 			)
 			(node
 				(ref "J2")
-				(pin "83")
-				(pinfunction "GND_83")
+				(pin "82")
+				(pinfunction "GND_82")
 				(pintype "passive")
 			)
 			(node

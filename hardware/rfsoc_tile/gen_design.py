@@ -45,20 +45,25 @@ def pin_map_a():
 
 
 def pin_map_b():
-    """SOM connector B (2x50): control, optics, power."""
-    sig = []
+    """SOM connector B (2x50): control, optics, power.
+
+    Grouped by row so every signal escapes straight off its own row: the even row faces the
+    RS-485 transceivers and the backplane header, the odd row faces the clock, calibration,
+    PSU and QSFP section. Power sits at the far end of both rows.
+    """
+    even = []                                                 # 40 per-channel module signals
     for s in range(1, 9):
-        sig += [f"TXD{s}", f"RXD{s}", f"DE{s}", f"TX_EN_T{s}", f"FAULT_N{s}"]
-    sig += ["CAL_SEL0", "CAL_SEL1", "CAL_SEL2", "CAL_SW_EN", "CAL_INJ_MEAS", "PPS_P", "PPS_N",
-            "PSU_TXD", "PSU_RXD", "PSU_DE", "QSFP_SCL", "QSFP_SDA", "QSFP_MODSEL", "QSFP_RESET", "QSFP_LPMODE",
-            "QSFP_INT", "QSFP_PRS", "MGT_REFCLK_P", "MGT_REFCLK_N"]
-    for l in range(4):
-        sig += [f"QTX{l}_P", f"QTX{l}_N", f"QRX{l}_P", f"QRX{l}_N"]
+        even += [f"TXD{s}", f"RXD{s}", f"DE{s}", f"TX_EN_T{s}", f"FAULT_N{s}"]
+    odd = ["PPS_P", "PPS_N", "CAL_SEL0", "CAL_SEL1", "CAL_SEL2", "CAL_SW_EN", "CAL_INJ_MEAS",
+           "PSU_TXD", "PSU_RXD", "PSU_DE", "MGT_REFCLK_P", "MGT_REFCLK_N", "QSFP_SCL", "QSFP_SDA",
+           "QSFP_MODSEL", "QSFP_RESET", "QSFP_LPMODE", "QSFP_INT", "QSFP_PRS"]
+    for l in range(4):                                        # 35 signals
+        odd += [f"QTX{l}_P", f"QTX{l}_N", f"QRX{l}_P", f"QRX{l}_N"]
+    odd += ["+12V"] * 7
     m = {}
-    for i, s in enumerate(sig):                               # 75 signals on pins 1..75
-        m[i + 1] = s
-    for p in range(76, 101):
-        m[p] = "+12V" if p <= 82 else "GND"
+    for k in range(50):                                       # column k: odd pin 2k+1, even pin 2k+2
+        m[2 * k + 1] = odd[k] if k < len(odd) else "GND"
+        m[2 * k + 2] = even[k] if k < len(even) else "GND"
     return m
 
 
